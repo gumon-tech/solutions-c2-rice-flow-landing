@@ -61,15 +61,15 @@ export function SiteHeaderClient({
 
   return (
     <header className="sticky top-0 z-50 border-b border-white/8 bg-slate-950/55 backdrop-blur-xl">
-      <Container className="py-4">
-        <div className="flex min-h-12 items-center justify-between gap-4">
+      <Container className="py-3.5 sm:py-4">
+        <div className="flex min-h-12 items-center justify-between gap-3 sm:gap-4">
           <Link href={withLocale(locale, "/")} className="flex items-center">
             <Image
               src="/brand/riceflow_logo_header.png"
               alt={`${copy.brand.name} logo`}
               width={960}
               height={344}
-              className="h-auto w-[112px] sm:w-[126px] lg:w-[142px]"
+              className="h-auto w-[118px] sm:w-[126px] lg:w-[142px]"
               priority
             />
           </Link>
@@ -168,7 +168,7 @@ export function SiteHeaderClient({
 
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-white transition hover:bg-white/[0.08] lg:hidden"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-white transition hover:bg-white/[0.08] lg:hidden"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
             aria-label={isMenuOpen ? copy.header.closeMenuLabel : copy.header.openMenuLabel}
@@ -204,7 +204,7 @@ export function SiteHeaderClient({
             isMenuOpen ? "mt-4 max-h-[560px] opacity-100" : "max-h-0 opacity-0",
           )}
         >
-          <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-4 shadow-panel max-h-[70vh] overflow-y-auto">
+          <div className="max-h-[70vh] overflow-y-auto rounded-3xl border border-white/10 bg-slate-950/80 p-4 shadow-panel">
             <div className="mb-4 rounded-2xl border border-white/10 bg-white/[0.03] p-2">
               <div className="grid grid-cols-2 gap-2">
                 {Object.entries(localeLabels).map(([targetLocale, label]) => {
@@ -215,7 +215,7 @@ export function SiteHeaderClient({
                       key={targetLocale}
                       href={withLocale(targetLocale as Locale, normalizedPathname)}
                       className={cn(
-                        "rounded-2xl px-3 py-2 text-center text-sm transition",
+                        "rounded-2xl px-3 py-3 text-center text-sm transition",
                         active
                           ? "bg-[#1d5fb8] text-white"
                           : "text-slate-300 hover:bg-white/[0.05] hover:text-white",
@@ -237,7 +237,7 @@ export function SiteHeaderClient({
                     href={withLocale(locale, item.href)}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "rounded-2xl px-4 py-3 text-sm transition",
+                      "rounded-2xl px-4 py-3.5 text-[0.95rem] transition",
                       active
                         ? "bg-white/[0.08] text-white"
                         : "text-slate-300 hover:bg-white/[0.05] hover:text-white",

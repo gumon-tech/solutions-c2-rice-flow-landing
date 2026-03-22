@@ -2,7 +2,6 @@ import type {
   ArchitectureLayer,
   ArchitectureNarrative,
   ContentCard,
-  HighlightBadge,
   NavItem,
   PlatformPillar,
   PositioningPoint,
@@ -71,19 +70,21 @@ export interface SiteDictionary {
     closeMenuLabel: string;
   };
   hero: {
-    badge: string;
+    kicker: string;
     title: string;
-    description: string;
+    summary: string;
+    outcomes: string[];
     primaryCta: string;
     secondaryCta: string;
     secondaryCtaHref: string;
-    highlights: HighlightBadge[];
-    supportingCards: Array<{ title: string; description: string }>;
+    ctaHint: string;
+    keyPoints: ContentCard[];
   };
   productPreview: {
     eyebrow: string;
     title: string;
     badge: string;
+    annotations: Array<{ title: string; description: string }>;
     stats: Array<{ label: string; value: string; description: string }>;
     alt: string;
   };
@@ -199,33 +200,34 @@ const en: SiteDictionary = {
     closeMenuLabel: "Close navigation menu",
   },
   hero: {
-    badge: "Strategic digital infrastructure for rice mill operations",
-    title: "Measure Right. Control Smart. Scale with Confidence.",
-    description:
-      "Rice Flow helps rice mill teams turn field data into operational clarity, coordinated response, maintenance readiness, and scalable control across sites, teams, and stakeholders.",
-    primaryCta: "Request Demo",
-    secondaryCta: "View Solution Overview",
-    secondaryCtaHref: "/solution",
-    highlights: [
-      { label: "Offline-first" },
-      { label: "Security-first" },
-      { label: "Mobile-first" },
+    kicker: "Built for modern rice mill operations",
+    title: "Measure moisture with confidence.\nRespond faster across every rice mill site.",
+    summary:
+      "Rice Flow helps rice mill teams turn field signals into operational clarity, faster response, and stronger cross-site control through one connected system for monitoring, alerts, and oversight.",
+    outcomes: [
+      "Detect moisture anomalies before they affect drying, storage, or outbound quality.",
+      "Cut response time with assigned alerts and clear escalation ownership.",
+      "Monitor every site, device, and critical workflow from one supervisory view.",
     ],
-    supportingCards: [
+    primaryCta: "See Live Demo",
+    secondaryCta: "Explore Platform",
+    secondaryCtaHref: "/solution",
+    ctaHint: "See how Rice Flow turns live field signals into alerts, ownership, and multi-site visibility in one guided walkthrough.",
+    keyPoints: [
       {
-        title: "IoT + Software",
-        description:
-          "Bring field devices, live signals, and operational workflows together in one connected platform.",
+        icon: "signal",
+        title: "Real-time monitoring",
+        description: "Track moisture, alerts, and signal health without waiting for manual reports.",
       },
       {
-        title: "Security by Design",
-        description:
-          "Built with governance, access control, and auditability from the ground up.",
+        icon: "response",
+        title: "Faster incident response",
+        description: "Route abnormal conditions to the right operator before downtime spreads.",
       },
       {
-        title: "Platform Growth",
-        description:
-          "Extend from a focused operational use case into multi-site deployment and service-ready platform growth.",
+        icon: "organization",
+        title: "Multi-site visibility",
+        description: "See line-level issues and mill-wide status in one enterprise-ready view.",
       },
     ],
   },
@@ -233,6 +235,20 @@ const en: SiteDictionary = {
     eyebrow: "Operational Preview",
     title: "Rice Flow Control Center",
     badge: "Live Operations",
+    annotations: [
+      {
+        title: "Real-time monitoring",
+        description: "See moisture, signal quality, and shift patterns in one operational view.",
+      },
+      {
+        title: "Anomaly detection",
+        description: "Surface abnormal dryer and site conditions fast, with clear response ownership.",
+      },
+      {
+        title: "Multi-site visibility",
+        description: "Compare sites, alerts, and readiness without switching between tools.",
+      },
+    ],
     stats: [
       {
         label: "Signal Integrity",
@@ -805,37 +821,55 @@ const th: SiteDictionary = {
     closeMenuLabel: "ปิดเมนูนำทาง",
   },
   hero: {
-    badge: "โครงสร้างพื้นฐานดิจิทัลสำหรับการดำเนินงานของโรงสีข้าว",
-    title: "Measure Right. Control Smart. Scale with Confidence.",
-    description:
-      "Rice Flow ช่วยเปลี่ยนข้อมูลจากหน้างานให้กลายเป็นการมองเห็นสถานะที่ชัดเจน การแจ้งเตือนที่ตอบสนองได้จริง ความพร้อมด้านบำรุงรักษา และการควบคุมการดำเนินงานที่ขยายได้ในหลายไซต์",
-    primaryCta: "ขอนัด Demo",
-    secondaryCta: "ดูภาพรวมโซลูชัน",
-    secondaryCtaHref: "/solution",
-    highlights: [
-      { label: "Offline-first" },
-      { label: "Security-first" },
-      { label: "Mobile-first" },
+    kicker: "ออกแบบมาสำหรับการปฏิบัติการของโรงสีข้าวยุคใหม่",
+    title: "วัดความชื้นได้อย่างมั่นใจ\nตอบสนองได้เร็วขึ้นในทุกไซต์ของโรงสีข้าว",
+    summary:
+      "Rice Flow ช่วยให้ทีมโรงสีข้าวเปลี่ยนข้อมูลจากหน้างานให้กลายเป็นความชัดเจนในการปฏิบัติการ การตอบสนองที่รวดเร็วขึ้น และการควบคุมข้ามหลายไซต์ผ่านระบบเดียวสำหรับการมอนิเตอร์ การแจ้งเตือน และการกำกับดูแล",
+    outcomes: [
+      "ตรวจจับความผิดปกติของความชื้นก่อนกระทบการอบ การจัดเก็บ และคุณภาพการส่งมอบ",
+      "ลดเวลาการตอบสนองด้วยการแจ้งเตือนที่มีผู้รับผิดชอบและลำดับ escalation ชัดเจน",
+      "มองเห็นทุกไซต์ ทุกอุปกรณ์ และ workflow สำคัญจากมุมมองกำกับดูแลเดียว",
     ],
-    supportingCards: [
+    primaryCta: "ดู Demo แบบ Live",
+    secondaryCta: "สำรวจแพลตฟอร์ม",
+    secondaryCtaHref: "/solution",
+    ctaHint: "ดูการทำงานจริงของการแจ้งเตือนแบบสด การมอบหมายผู้รับผิดชอบ และการมองเห็นหลายไซต์ใน walkthrough เดียว",
+    keyPoints: [
       {
-        title: "IoT + Software",
-        description: "เชื่อมอุปกรณ์ภาคสนาม ข้อมูลจากเซนเซอร์ และขั้นตอนการทำงานไว้ในแพลตฟอร์มเดียว",
+        icon: "signal",
+        title: "ติดตามสถานะแบบเรียลไทม์",
+        description: "ติดตามความชื้น การแจ้งเตือน และคุณภาพสัญญาณได้โดยไม่ต้องรอรายงานจากหน้างาน",
       },
       {
-        title: "Security by Design",
-        description: "ออกแบบให้รองรับการกำกับดูแล สิทธิ์การเข้าถึง และการตรวจสอบย้อนหลังในระดับองค์กรตั้งแต่ต้น",
+        icon: "response",
+        title: "ตอบสนองเหตุการณ์ได้เร็วขึ้น",
+        description: "ส่งต่อเหตุผิดปกติให้คนที่ใช่ได้ทันที ก่อนลุกลามเป็น downtime ที่กระทบการผลิต",
       },
       {
-        title: "Platform Growth",
-        description: "ต่อยอดจากโจทย์ปฏิบัติการไปสู่หลายไซต์และโมเดลการให้บริการในอนาคตได้อย่างเป็นระบบ",
+        icon: "organization",
+        title: "มองเห็นหลายไซต์ในภาพเดียว",
+        description: "เห็นปัญหาระดับไลน์ผลิตและภาพรวมหลายโรงสีในมุมมองเดียวที่พร้อมใช้จริงระดับองค์กร",
       },
     ],
   },
   productPreview: {
     eyebrow: "ตัวอย่างมุมมองปฏิบัติการ",
-    title: "Rice Flow Control Center",
-    badge: "Live Telemetry",
+    title: "ศูนย์ควบคุม Rice Flow",
+    badge: "ข้อมูลสดจากหน้างาน",
+    annotations: [
+      {
+        title: "ติดตามสถานะแบบเรียลไทม์",
+        description: "เห็นความชื้น คุณภาพสัญญาณ และแนวโน้มการทำงานจากมุมมองเดียวแบบสด",
+      },
+      {
+        title: "ตรวจจับความผิดปกติ",
+        description: "ดันเหตุผิดปกติของ Dryer และแต่ละไซต์ขึ้นมาให้ทีมตอบสนองได้ทันที",
+      },
+      {
+        title: "มองเห็นหลายไซต์ในภาพเดียว",
+        description: "เปรียบเทียบสถานะหลายไซต์ การแจ้งเตือน และความพร้อมของระบบได้โดยไม่ต้องสลับเครื่องมือ",
+      },
+    ],
     stats: [
       {
         label: "ความสมบูรณ์ของสัญญาณ",

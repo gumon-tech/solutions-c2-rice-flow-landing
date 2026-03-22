@@ -6,7 +6,7 @@ import type { SiteDictionary } from "@/lib/site-copy";
 
 export function ValuePropositionSection({ copy }: { copy: SiteDictionary }) {
   return (
-    <section className="py-16 sm:py-24">
+    <section className="py-18 sm:py-24">
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
           <SectionHeading
@@ -15,15 +15,17 @@ export function ValuePropositionSection({ copy }: { copy: SiteDictionary }) {
             description={copy.sections.value.description}
           />
 
-          <SurfaceCard className="p-6 sm:p-7">
+          <SurfaceCard className="p-5 sm:p-7">
             <div className="grid gap-5 sm:grid-cols-2">
               {copy.valueCards.map((card) => (
                 <div key={card.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
                   <div className="flex items-center gap-3 text-accent">
                     <Icon name={card.icon} className="h-5 w-5" />
-                    <h3 className="text-base font-semibold text-white">{card.title}</h3>
+                    <h3 className="text-[1.0625rem] font-semibold text-white sm:text-base">{card.title}</h3>
                   </div>
-                  <p className="mt-3 text-sm leading-7 text-slate-300">{card.description}</p>
+                  <p className="mt-3 text-[0.98rem] leading-8 text-slate-300 sm:text-sm sm:leading-7">
+                    {card.description}
+                  </p>
                 </div>
               ))}
             </div>

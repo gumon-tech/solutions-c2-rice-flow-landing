@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Manrope } from "next/font/google";
 import { getLocaleOgImage } from "@/lib/metadata";
 import { getDictionary } from "@/lib/site-copy";
@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   keywords: defaultCopy.metadata.keywords,
   applicationName: "Rice Flow",
   manifest: "/manifest.webmanifest",
-  themeColor: "#07101c",
   icons: {
     icon: [
       { url: "/icon.png", type: "image/png", sizes: "512x512" },
@@ -48,6 +47,10 @@ export const metadata: Metadata = {
     description: defaultCopy.metadata.twitterDescription,
     images: [getLocaleOgImage("en")],
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#07101c",
 };
 
 export default function RootLayout({
