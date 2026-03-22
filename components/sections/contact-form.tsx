@@ -1,12 +1,6 @@
 "use client";
 
-import { useActionState, useEffect, useRef } from "react";
-import { useFormStatus } from "react-dom";
-import {
-  contactFormInitialState,
-  submitContactForm,
-  type ContactFormState,
-} from "@/app/contact/actions";
+import { useEffect, useRef, useState } from "react";
 import type { Locale } from "@/lib/i18n";
 import type { SiteDictionary } from "@/lib/site-copy";
 import { cn } from "@/lib/utils";
@@ -14,12 +8,12 @@ import { cn } from "@/lib/utils";
 function SubmitButton({
   idleLabel,
   pendingLabel,
+  pending,
 }: {
   idleLabel: string;
   pendingLabel: string;
+  pending: boolean;
 }) {
-  const { pending } = useFormStatus();
-
   return (
     <button
       type="submit"
@@ -29,6 +23,12 @@ function SubmitButton({
       {pending ? pendingLabel : idleLabel}
     </button>
   );
+}
+
+interface ContactFormState {
+  status: "idle" | "success" | "error";
+  message?: string;
+  errors?: Partial<Record<"fullName" | "workEmail" | "company" | "interestArea" | "goals", string>>;
 }
 
 interface FieldProps {
@@ -106,14 +106,25 @@ function Field({
   );
 }
 
+const initialState: ContactFormState = {
+  status: "idle",
+};
+
+function isValidEmail(value: string) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+}
+
 export function ContactForm({
   locale,
   copy,
+  messages,
 }: {
   locale: Locale;
   copy: SiteDictionary["form"];
+  messages: SiteDictionary["messages"];
 }) {
-  const [state, formAction] = useActionState(submitContactForm, contactFormInitialState);
+  const [state, setState] = useState<ContactFormState>(initialState);
+  const [pending, setPending] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
 
   useEffect(() => {
@@ -122,8 +133,61 @@ export function ContactForm({
     }
   }, [state.status]);
 
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const formData = new FormData(event.currentTarget);
+    const fullName = String(formData.get("fullName") ?? "").trim();
+    const workEmail = String(formData.get("workEmail") ?? "").trim();
+    const company = String(formData.get("company") ?? "").trim();
+    const interestArea = String(formData.get("interestArea") ?? "").trim();
+    const goals = String(formData.get("goals") ?? "").trim();
+
+    const errors: ContactFormState["errors"] = {};
+
+    if (fullName.length < 2) {
+      errors.fullName = messages.validation.fullName;
+    }
+
+    if (!isValidEmail(workEmail)) {
+      errors.workEmail = messages.validation.workEmail;
+    }
+
+    if (company.length < 2) {
+      errors.company = messages.validation.company;
+    }
+
+    if (!interestArea) {
+      errors.interestArea = messages.validation.interestArea;
+    }
+
+    if (goals.length < 20) {
+      errors.goals = messages.validation.goals;
+    }
+
+    if (Object.keys(errors).length > 0) {
+      setState({
+        status: "error",
+        message: messages.contactErrorSummary,
+        errors,
+      });
+      return;
+    }
+
+    setPending(true);
+    setState(initialState);
+
+    await new Promise((resolve) => setTimeout(resolve, 400));
+
+    setState({
+      status: "success",
+      message: messages.contactSuccess,
+    });
+    setPending(false);
+  }
+
   return (
-    <form ref={formRef} action={formAction} className="grid gap-5">
+    <form ref={formRef} onSubmit={handleSubmit} className="grid gap-5">
       <input type="hidden" name="locale" value={locale} />
       <div className="grid gap-5 sm:grid-cols-2">
         <Field
@@ -178,7 +242,7 @@ export function ContactForm({
         </p>
       ) : null}
 
-      <SubmitButton idleLabel={copy.submitIdle} pendingLabel={copy.submitPending} />
+      <SubmitButton idleLabel={copy.submitIdle} pendingLabel={copy.submitPending} pending={pending} />
     </form>
   );
 }

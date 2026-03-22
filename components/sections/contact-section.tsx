@@ -35,7 +35,7 @@ export function ContactSection({
           </SurfaceCard>
 
           <SurfaceCard className="p-6 sm:p-8">
-            <ContactForm locale={locale} copy={copy.form} />
+            <ContactForm locale={locale} copy={copy.form} messages={copy.messages} />
           </SurfaceCard>
         </div>
       </Container>
