@@ -10,16 +10,19 @@ import { SiteHeader } from "@/components/sections/site-header";
 import { ValuePropositionSection } from "@/components/sections/value-proposition-section";
 import { WhyRiceFlowSection } from "@/components/sections/why-rice-flow-section";
 import type { LocalePageProps } from "@/app/[locale]/layout";
+import { createLocaleMetadata } from "@/lib/metadata";
 import { getDictionary } from "@/lib/site-copy";
 
 export async function generateMetadata({ params }: LocalePageProps): Promise<Metadata> {
   const { locale } = await params;
   const copy = getDictionary(locale);
 
-  return {
+  return createLocaleMetadata({
+    locale,
     title: copy.metadata.siteTitle,
     description: copy.metadata.siteDescription,
-  };
+    dictionary: copy,
+  });
 }
 
 export default async function LocalizedHomePage({ params }: LocalePageProps) {

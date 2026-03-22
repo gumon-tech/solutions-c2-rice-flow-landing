@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -62,14 +63,15 @@ export function SiteHeaderClient({
     <header className="sticky top-0 z-50 border-b border-white/8 bg-slate-950/55 backdrop-blur-xl">
       <Container className="py-4">
         <div className="flex min-h-12 items-center justify-between gap-4">
-          <Link href={withLocale(locale, "/")} className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.06] text-sm font-semibold text-white">
-              RF
-            </span>
-            <div>
-              <p className="text-sm font-semibold text-white">{copy.brand.name}</p>
-              <p className="text-xs uppercase tracking-[0.22em] text-slate-500">{copy.brand.platformLabel}</p>
-            </div>
+          <Link href={withLocale(locale, "/")} className="flex items-center">
+            <Image
+              src="/brand/riceflow_logo_header.png"
+              alt={`${copy.brand.name} logo`}
+              width={960}
+              height={344}
+              className="h-auto w-[112px] sm:w-[126px] lg:w-[142px]"
+              priority
+            />
           </Link>
 
           <nav className="hidden items-center gap-2 lg:flex">
@@ -94,7 +96,7 @@ export function SiteHeaderClient({
             })}
           </nav>
 
-          <div className="hidden items-center gap-3 sm:flex">
+          <div className="hidden items-center gap-3 lg:flex">
             <div className="relative" ref={localeMenuRef}>
               <button
                 type="button"
@@ -199,10 +201,10 @@ export function SiteHeaderClient({
           id="mobile-navigation"
           className={cn(
             "overflow-hidden transition-[max-height,opacity,margin] duration-200 lg:hidden",
-            isMenuOpen ? "mt-4 max-h-[420px] opacity-100" : "max-h-0 opacity-0",
+            isMenuOpen ? "mt-4 max-h-[560px] opacity-100" : "max-h-0 opacity-0",
           )}
         >
-          <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-4 shadow-panel">
+          <div className="rounded-3xl border border-white/10 bg-slate-950/80 p-4 shadow-panel max-h-[70vh] overflow-y-auto">
             <div className="mb-4 rounded-2xl border border-white/10 bg-white/[0.03] p-2">
               <div className="grid grid-cols-2 gap-2">
                 {Object.entries(localeLabels).map(([targetLocale, label]) => {

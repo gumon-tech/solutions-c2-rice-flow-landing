@@ -16,7 +16,7 @@ export function PlatformOverviewSection({ copy }: { copy: SiteDictionary }) {
           align="center"
         />
 
-        <div className="mt-10 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+        <div className="mt-10 grid gap-6 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
           <div className="grid gap-5">
             {copy.platformPillars.map((pillar) => (
               <SurfaceCard key={pillar.title} className="p-6">
@@ -27,7 +27,7 @@ export function PlatformOverviewSection({ copy }: { copy: SiteDictionary }) {
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-white">{pillar.title}</h3>
                     <p className="mt-3 text-sm leading-7 text-slate-300">{pillar.description}</p>
-                    <ul className="mt-4 space-y-2 text-sm text-slate-400">
+                    <ul className="mt-5 space-y-2.5 text-sm text-slate-400">
                       {pillar.supportingPoints.map((point) => (
                         <li key={point} className="flex items-start gap-3">
                           <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />

@@ -1,10 +1,13 @@
 node_modules
 .next
 .next-cache-backup
+.next-cache-backup-2
+.next-cache-backup-*
 out
 dist
 .DS_Store
 *.log
+*.tsbuildinfo
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*

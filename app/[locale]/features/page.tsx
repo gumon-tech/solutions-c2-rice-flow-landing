@@ -2,22 +2,26 @@ import type { Metadata } from "next";
 import { CoreCapabilitiesSection } from "@/components/sections/core-capabilities-section";
 import { CtaSection } from "@/components/sections/cta-section";
 import { DesignPrinciplesSection } from "@/components/sections/design-principles-section";
+import { ProductExperienceSection } from "@/components/sections/product-experience-section";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { SiteHeader } from "@/components/sections/site-header";
 import { ValuePropositionSection } from "@/components/sections/value-proposition-section";
 import { PageIntro } from "@/components/ui/page-intro";
 import type { LocalePageProps } from "@/app/[locale]/layout";
 import { withLocale } from "@/lib/i18n";
+import { createLocaleMetadata } from "@/lib/metadata";
 import { getDictionary } from "@/lib/site-copy";
 
 export async function generateMetadata({ params }: LocalePageProps): Promise<Metadata> {
   const { locale } = await params;
   const copy = getDictionary(locale);
 
-  return {
+  return createLocaleMetadata({
+    locale,
     title: copy.pages.features.metadataTitle,
     description: copy.pages.features.metadataDescription,
-  };
+    dictionary: copy,
+  });
 }
 
 export default async function FeaturesPage({ params }: LocalePageProps) {
@@ -41,6 +45,7 @@ export default async function FeaturesPage({ params }: LocalePageProps) {
             href: withLocale(locale, copy.pages.features.secondaryCta?.href ?? "/"),
           }}
         />
+        <ProductExperienceSection locale={locale} />
         <CoreCapabilitiesSection copy={copy} />
         <ValuePropositionSection copy={copy} />
         <DesignPrinciplesSection copy={copy} />

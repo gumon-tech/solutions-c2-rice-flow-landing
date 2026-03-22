@@ -123,7 +123,7 @@ export const platformPillars: PlatformPillar[] = [
     ],
   },
   {
-    title: "Dashboard / War Room",
+    title: "Dashboard / Control Room",
     description:
       "A high-clarity operational display for supervisors and leadership to monitor system-wide readiness in real time.",
     icon: "analytics",
@@ -286,7 +286,7 @@ export const architectureLayers: ArchitectureLayer[] = [
   {
     title: "Application Experience Layer",
     description:
-      "Web, mobile, and war room experiences expose the same trusted operational context for different roles.",
+      "Web, mobile, and control room experiences expose the same trusted operational context for different roles.",
     points: [
       "Management workflows and configuration on web",
       "Field response and evidence capture on mobile",

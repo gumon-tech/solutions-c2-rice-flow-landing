@@ -4,7 +4,7 @@ Suggested production assets for this folder:
   Product-style dashboard composition that shows telemetry, alerts, device health, and executive status.
 
 - `platform-architecture.png` or `.webp`
-  Simplified system overview illustrating field devices, edge/network, cloud platform, web, mobile, and war room layers.
+  Simplified system overview illustrating field devices, edge/network, cloud platform, web, mobile, and control room layers.
 
 - `og-cover.png`
   Social sharing cover aligned with the premium industrial SaaS visual language.

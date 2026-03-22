@@ -24,7 +24,7 @@ function SubmitButton({
     <button
       type="submit"
       disabled={pending}
-      className="inline-flex min-h-12 items-center justify-center rounded-full border border-accent bg-accent px-5 py-3 text-sm font-semibold tracking-wide text-slate-950 transition hover:-translate-y-0.5 hover:bg-[#67e4d3] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0"
+      className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-accent bg-accent px-5 py-3 text-sm font-semibold tracking-wide text-slate-950 transition hover:-translate-y-0.5 hover:bg-[#67e4d3] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 sm:w-auto"
     >
       {pending ? pendingLabel : idleLabel}
     </button>

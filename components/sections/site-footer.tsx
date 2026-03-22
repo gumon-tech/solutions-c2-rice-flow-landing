@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import type { Locale } from "@/lib/i18n";
@@ -15,7 +16,13 @@ export function SiteFooter({
     <footer className="border-t border-white/8 py-10">
       <Container className="grid gap-8 md:grid-cols-[1.1fr_0.9fr_0.9fr]">
         <div>
-          <p className="text-lg font-semibold text-white">{copy.brand.name}</p>
+          <Image
+            src="/brand/riceflow_logo_header.png"
+            alt={`${copy.brand.name} logo`}
+            width={960}
+            height={344}
+            className="h-auto w-[180px] sm:w-[210px]"
+          />
           <p className="mt-3 max-w-md text-sm leading-7 text-slate-400">{copy.footer.description}</p>
         </div>
 

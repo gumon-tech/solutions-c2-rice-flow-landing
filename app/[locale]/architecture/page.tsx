@@ -6,21 +6,24 @@ import { CtaSection } from "@/components/sections/cta-section";
 import { PlatformOverviewSection } from "@/components/sections/platform-overview-section";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { SiteHeader } from "@/components/sections/site-header";
+import { ArchitectureSystemMap } from "@/components/ui/architecture-system-map";
 import { PageIntro } from "@/components/ui/page-intro";
-import { PlatformVisual } from "@/components/ui/platform-visual";
 import { Container } from "@/components/ui/container";
 import type { LocalePageProps } from "@/app/[locale]/layout";
 import { withLocale } from "@/lib/i18n";
+import { createLocaleMetadata } from "@/lib/metadata";
 import { getDictionary } from "@/lib/site-copy";
 
 export async function generateMetadata({ params }: LocalePageProps): Promise<Metadata> {
   const { locale } = await params;
   const copy = getDictionary(locale);
 
-  return {
+  return createLocaleMetadata({
+    locale,
     title: copy.pages.architecture.metadataTitle,
     description: copy.pages.architecture.metadataDescription,
-  };
+    dictionary: copy,
+  });
 }
 
 export default async function ArchitecturePage({ params }: LocalePageProps) {
@@ -45,7 +48,7 @@ export default async function ArchitecturePage({ params }: LocalePageProps) {
           }}
         />
         <Container className="pb-4">
-          <PlatformVisual />
+          <ArchitectureSystemMap locale={locale} />
         </Container>
         <ArchitectureLayersSection copy={copy} />
         <ArchitecturePrinciplesSection copy={copy} />

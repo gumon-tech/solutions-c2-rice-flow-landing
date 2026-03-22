@@ -3,22 +3,27 @@ import { CtaSection } from "@/components/sections/cta-section";
 import { PlatformOverviewSection } from "@/components/sections/platform-overview-section";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { SiteHeader } from "@/components/sections/site-header";
+import { ProductExperienceSection } from "@/components/sections/product-experience-section";
 import { SolutionOverviewSection } from "@/components/sections/solution-overview-section";
 import { ValuePropositionSection } from "@/components/sections/value-proposition-section";
 import { WhyRiceFlowSection } from "@/components/sections/why-rice-flow-section";
 import { PageIntro } from "@/components/ui/page-intro";
 import type { LocalePageProps } from "@/app/[locale]/layout";
 import { withLocale } from "@/lib/i18n";
+import { createLocaleMetadata } from "@/lib/metadata";
 import { getDictionary } from "@/lib/site-copy";
+import { OperationsVisualSection } from "@/components/sections/operations-visual-section";
 
 export async function generateMetadata({ params }: LocalePageProps): Promise<Metadata> {
   const { locale } = await params;
   const copy = getDictionary(locale);
 
-  return {
+  return createLocaleMetadata({
+    locale,
     title: copy.pages.solution.metadataTitle,
     description: copy.pages.solution.metadataDescription,
-  };
+    dictionary: copy,
+  });
 }
 
 export default async function SolutionPage({ params }: LocalePageProps) {
@@ -42,6 +47,8 @@ export default async function SolutionPage({ params }: LocalePageProps) {
             href: withLocale(locale, copy.pages.solution.secondaryCta?.href ?? "/architecture"),
           }}
         />
+        <OperationsVisualSection />
+        <ProductExperienceSection locale={locale} />
         <SolutionOverviewSection copy={copy} />
         <ValuePropositionSection copy={copy} />
         <PlatformOverviewSection copy={copy} />

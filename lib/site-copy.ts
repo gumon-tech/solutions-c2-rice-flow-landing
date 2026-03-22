@@ -160,7 +160,7 @@ const en: SiteDictionary = {
   metadata: {
     siteTitle: "Rice Flow | Measure Right. Control Smart. Scale with Confidence.",
     siteDescription:
-      "Rice Flow is a secure digital operations platform for rice mills, combining IoT telemetry, alert-driven workflows, auditability, and scalable multi-site management.",
+      "Rice Flow is a secure digital operations platform for rice mills, combining IoT signals, alert-driven workflows, traceable operations, and scalable multi-site management.",
     keywords: [
       "Rice Flow",
       "rice mill platform",
@@ -178,7 +178,7 @@ const en: SiteDictionary = {
   },
   brand: {
     name: "Rice Flow",
-    platformLabel: "C2 TECH Platform",
+    platformLabel: "C2 TECH COMPANY LIMITED",
   },
   navigation: [
     { label: "Solution", href: "/solution" },
@@ -215,7 +215,7 @@ const en: SiteDictionary = {
       {
         title: "IoT + Software",
         description:
-          "Bring field devices, telemetry, and operational workflows together in one connected platform.",
+          "Bring field devices, live signals, and operational workflows together in one connected platform.",
       },
       {
         title: "Security by Design",
@@ -225,19 +225,19 @@ const en: SiteDictionary = {
       {
         title: "Platform Growth",
         description:
-          "Extend from a focused operational use case into multi-site deployment and partner-ready services.",
+          "Extend from a focused operational use case into multi-site deployment and service-ready platform growth.",
       },
     ],
   },
   productPreview: {
     eyebrow: "Operational Preview",
     title: "Rice Flow Control Center",
-    badge: "Live Telemetry",
+    badge: "Live Operations",
     stats: [
       {
         label: "Signal Integrity",
         value: "98.4%",
-        description: "Reliable field telemetry coverage",
+        description: "Reliable field signal coverage",
       },
       {
         label: "Active Alerts",
@@ -263,7 +263,7 @@ const en: SiteDictionary = {
       eyebrow: "Value proposition",
       title: "A platform that improves visibility, control, and operational readiness",
       description:
-        "Rice Flow treats telemetry as the starting point for a stronger operating model. Teams gain better visibility, faster response paths, stronger governance, and a foundation built to scale.",
+        "Rice Flow treats field signals as the starting point for a stronger operating model. Teams gain better visibility, faster response paths, stronger governance, and a foundation built to scale.",
     },
     platform: {
       eyebrow: "Platform overview",
@@ -275,7 +275,7 @@ const en: SiteDictionary = {
       eyebrow: "Core capabilities",
       title: "Built for mission-critical operational workflows",
       description:
-        "The platform connects field telemetry, user actions, device oversight, and management accountability without turning the experience into a bloated control panel.",
+        "The platform connects field signals, user actions, device oversight, and management accountability without turning the experience into a bloated control panel.",
     },
     principles: {
       eyebrow: "Design principles",
@@ -317,7 +317,7 @@ const en: SiteDictionary = {
       eyebrow: "Next step",
       title: "Bring more control to rice mill operations with trusted data.",
       description:
-        "Talk with the C2 TECH team about how Rice Flow can support moisture control, field response, device visibility, and enterprise-ready operations across your sites.",
+        "Talk with the Rice Flow team about how the platform can support moisture control, field response, device visibility, and enterprise-ready operations across your sites.",
       primaryCta: "Request a Demo",
       secondaryCta: "Email Sales",
     },
@@ -329,7 +329,7 @@ const en: SiteDictionary = {
       emailLabel: "Email",
       discussionLabel: "Discussion focus",
       discussionValue:
-        "Demo request, solution fit, architecture review, and partner-ready deployment model",
+        "Demo request, solution fit, architecture review, and rollout planning",
     },
   },
   pages: {
@@ -374,7 +374,7 @@ const en: SiteDictionary = {
     contact: {
       metadataTitle: "Contact Rice Flow | Request Demo and Enterprise Consultation",
       metadataDescription:
-        "Contact the Rice Flow team to request a demo, discuss solution fit, review architecture, or explore partnership opportunities.",
+        "Contact the Rice Flow team to request a demo, discuss solution fit, review architecture, or plan the next rollout step.",
       eyebrow: "Contact",
       title: "Bring your operational challenges into a structured solution discussion",
       description:
@@ -419,14 +419,14 @@ const en: SiteDictionary = {
       goals: "Please share a bit more detail about your operational goals.",
     },
   },
-    footer: {
+  footer: {
     description:
-      "A secure, scalable platform for modern rice mill operations, from field telemetry to response, maintenance, and executive visibility.",
+      "A secure, scalable platform for modern rice mill operations, from field signals to response, maintenance, and executive visibility.",
     quickLinksLabel: "Quick links",
     contactLabel: "Contact",
-    contactEmail: "sales@c2tech.example",
-    contactDescription: "Demo booking and enterprise consultation",
-    copyright: "© 2026 Rice Flow. Copyright placeholder.",
+    contactEmail: "hello@riceflow.com",
+    contactDescription: "Operated by C2 TECH COMPANY LIMITED",
+    copyright: "© 2026 Rice Flow. All rights reserved.",
   },
   problemCards: [
     {
@@ -528,7 +528,7 @@ const en: SiteDictionary = {
       ],
     },
     {
-      title: "Dashboard / War Room",
+      title: "Dashboard / Control Room",
       description:
         "A high-clarity operational display for supervisors and leadership to monitor system-wide readiness in real time.",
       icon: "analytics",
@@ -690,7 +690,7 @@ const en: SiteDictionary = {
     {
       title: "Application Experience Layer",
       description:
-        "Web, mobile, and war room experiences expose the same trusted operational context to different roles.",
+        "Web, mobile, and control room experiences expose the same trusted operational context to different roles.",
       points: [
         "Management workflows and configuration on web",
         "Field response and evidence capture on mobile",
@@ -784,7 +784,7 @@ const th: SiteDictionary = {
   },
   brand: {
     name: "Rice Flow",
-    platformLabel: "แพลตฟอร์มโดย C2 TECH",
+    platformLabel: "C2 TECH COMPANY LIMITED",
   },
   navigation: [
     { label: "โซลูชัน", href: "/solution" },
@@ -872,7 +872,7 @@ const th: SiteDictionary = {
       eyebrow: "ภาพรวมแพลตฟอร์ม",
       title: "สามประสบการณ์การใช้งานที่เชื่อมกันเป็นระบบเดียว",
       description:
-        "Rice Flow ผสานการบริหารจัดการ การทำงานภาคสนาม และมุมมองแบบศูนย์ติดตามสถานะ เพื่อให้ผู้ใช้แต่ละบทบาททำงานบนบริบทข้อมูลเดียวกัน",
+        "Rice Flow ผสานการบริหารจัดการ การทำงานภาคสนาม และมุมมองแบบ Control Room เพื่อให้ผู้ใช้แต่ละบทบาททำงานบนบริบทข้อมูลเดียวกัน",
     },
     capabilities: {
       eyebrow: "ความสามารถหลัก",
@@ -920,7 +920,7 @@ const th: SiteDictionary = {
       eyebrow: "ขั้นตอนถัดไป",
       title: "ยกระดับการควบคุมโรงสีข้าวด้วยข้อมูลที่เชื่อถือได้",
       description:
-        "พูดคุยกับทีม C2 TECH ว่า Rice Flow จะช่วยเรื่องการควบคุมความชื้น การตอบสนองหน้างาน การมองเห็นอุปกรณ์ และการขยายระบบระดับองค์กรได้อย่างไร",
+        "พูดคุยกับทีม Rice Flow ว่าแพลตฟอร์มนี้จะช่วยเรื่องการควบคุมความชื้น การตอบสนองหน้างาน การมองเห็นอุปกรณ์ และการขยายระบบระดับองค์กรได้อย่างไร",
       primaryCta: "ขอนัด Demo",
       secondaryCta: "อีเมลถึงทีมขาย",
     },
@@ -932,7 +932,7 @@ const th: SiteDictionary = {
       emailLabel: "อีเมล",
       discussionLabel: "หัวข้อที่พูดคุยได้",
       discussionValue:
-        "ขอ demo, ประเมินความเหมาะสมของโซลูชัน, ทบทวนสถาปัตยกรรม และแนวทางการขยายต่อในอนาคต",
+        "ขอ demo, ประเมินความเหมาะสมของโซลูชัน, ทบทวนสถาปัตยกรรม และวางแผนการใช้งานจริง",
     },
   },
   pages: {
@@ -1021,14 +1021,14 @@ const th: SiteDictionary = {
       goals: "กรุณาระบุรายละเอียดเพิ่มเติมเกี่ยวกับเป้าหมายหรือปัญหาปัจจุบัน",
     },
   },
-    footer: {
+  footer: {
     description:
       "แพลตฟอร์มที่ปลอดภัยและขยายได้สำหรับการบริหารจัดการโรงสีข้าวยุคใหม่ ตั้งแต่ข้อมูลภาคสนามไปจนถึงการตอบสนอง งานบำรุงรักษา และมุมมองสำหรับผู้บริหาร",
     quickLinksLabel: "ลิงก์ด่วน",
     contactLabel: "ติดต่อ",
-    contactEmail: "sales@c2tech.example",
-    contactDescription: "สำหรับขอ demo และปรึกษาโซลูชันระดับองค์กร",
-    copyright: "© 2026 Rice Flow. ข้อความลิขสิทธิ์ตัวอย่าง",
+    contactEmail: "hello@riceflow.com",
+    contactDescription: "ดำเนินการโดย C2 TECH COMPANY LIMITED",
+    copyright: "© 2026 Rice Flow. สงวนลิขสิทธิ์",
   },
   problemCards: [
     {
@@ -1124,9 +1124,9 @@ const th: SiteDictionary = {
       ],
     },
     {
-      title: "Dashboard / War Room",
+      title: "Dashboard / Control Room",
       description:
-        "มุมมองสถานะการดำเนินงานแบบชัดเจนสำหรับหัวหน้างานและผู้บริหาร เพื่อเห็นความพร้อมของทั้งระบบแบบ near real-time",
+        "มุมมองสถานะการดำเนินงานแบบชัดเจนสำหรับหัวหน้างานและผู้บริหาร เพื่อเห็นความพร้อมของทั้งระบบแบบใกล้เคียงเวลาจริง",
       icon: "analytics",
       supportingPoints: [
         "มุมมองจอใหญ่และภาพรวมแนวโน้ม",
@@ -1274,7 +1274,7 @@ const th: SiteDictionary = {
     {
       title: "Application Experience Layer",
       description:
-        "Web, mobile และศูนย์ติดตามสถานะ นำเสนอบริบทการทำงานชุดเดียวกันให้กับผู้ใช้แต่ละบทบาท",
+        "Web, mobile และ Control Room นำเสนอบริบทการทำงานชุดเดียวกันให้กับผู้ใช้แต่ละบทบาท",
       points: [
         "การตั้งค่าและ workflow ด้านบริหารบน web",
         "การตอบสนองหน้างานและเก็บหลักฐานบน mobile",

@@ -5,16 +5,19 @@ import { SiteHeader } from "@/components/sections/site-header";
 import { PageIntro } from "@/components/ui/page-intro";
 import type { LocalePageProps } from "@/app/[locale]/layout";
 import { withLocale } from "@/lib/i18n";
+import { createLocaleMetadata } from "@/lib/metadata";
 import { getDictionary } from "@/lib/site-copy";
 
 export async function generateMetadata({ params }: LocalePageProps): Promise<Metadata> {
   const { locale } = await params;
   const copy = getDictionary(locale);
 
-  return {
+  return createLocaleMetadata({
+    locale,
     title: copy.pages.contact.metadataTitle,
     description: copy.pages.contact.metadataDescription,
-  };
+    dictionary: copy,
+  });
 }
 
 export default async function ContactPage({ params }: LocalePageProps) {

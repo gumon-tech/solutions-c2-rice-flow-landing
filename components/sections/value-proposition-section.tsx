@@ -8,17 +8,17 @@ export function ValuePropositionSection({ copy }: { copy: SiteDictionary }) {
   return (
     <section className="py-16 sm:py-24">
       <Container>
-        <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
+        <div className="grid gap-10 lg:grid-cols-[0.92fr_1.08fr] lg:items-end">
           <SectionHeading
             eyebrow={copy.sections.value.eyebrow}
             title={copy.sections.value.title}
             description={copy.sections.value.description}
           />
 
-          <SurfaceCard className="p-6">
+          <SurfaceCard className="p-6 sm:p-7">
             <div className="grid gap-5 sm:grid-cols-2">
               {copy.valueCards.map((card) => (
-                <div key={card.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5">
+                <div key={card.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
                   <div className="flex items-center gap-3 text-accent">
                     <Icon name={card.icon} className="h-5 w-5" />
                     <h3 className="text-base font-semibold text-white">{card.title}</h3>
