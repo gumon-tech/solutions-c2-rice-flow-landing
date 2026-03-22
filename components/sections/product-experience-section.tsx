@@ -66,17 +66,37 @@ export function ProductExperienceSection({ locale }: { locale: Locale }) {
               title={copy.title}
               description={copy.description}
             />
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid gap-4 md:grid-cols-3">
               {copy.cards.map((card) => (
-                <SurfaceCard key={card.title} className="p-5">
-                  <p className="text-lg font-semibold text-white">{card.title}</p>
-                  <p className="mt-3 text-sm leading-7 text-slate-300">{card.description}</p>
+                <SurfaceCard key={card.title} className="p-5 sm:p-6">
+                  <p className="max-w-[16ch] text-[1.04rem] font-semibold leading-[1.45] text-white sm:text-[1.08rem]">
+                    {card.title}
+                  </p>
+                  <p className="mt-3 max-w-[28ch] text-[0.98rem] leading-7 text-slate-300 sm:max-w-none sm:text-sm">
+                    {card.description}
+                  </p>
                 </SurfaceCard>
               ))}
             </div>
           </div>
 
-          <RiceFlowCommandCenter locale={locale} />
+          <div className="lg:hidden">
+            <SurfaceCard className="p-5">
+              <p className="text-xs uppercase tracking-[0.24em] text-accent">{copy.eyebrow}</p>
+              <h3 className="mt-3 text-[1.35rem] font-semibold leading-tight text-white">
+                {locale === "th" ? "ภาพรวมหน้าจอสำหรับการมอนิเตอร์และตอบสนอง" : "A focused view for monitoring and response"}
+              </h3>
+              <p className="mt-3 text-[0.98rem] leading-7 text-slate-300">
+                {locale === "th"
+                  ? "บนมือถือเราเน้นเฉพาะสาระสำคัญก่อน แล้วค่อยเปิดดูรายละเอียดเชิงลึกในมุมมองที่เหมาะกับจอใหญ่กว่า"
+                  : "On mobile we prioritize the essential operational story first, then leave deeper workspace detail to larger screens."}
+              </p>
+            </SurfaceCard>
+          </div>
+
+          <div className="hidden lg:block">
+            <RiceFlowCommandCenter locale={locale} />
+          </div>
         </div>
       </Container>
     </section>

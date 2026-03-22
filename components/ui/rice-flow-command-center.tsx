@@ -116,7 +116,7 @@ export function RiceFlowCommandCenter({ locale }: { locale: Locale }) {
         <div>
           <p className="text-xs uppercase tracking-[0.28em] text-slate-500">{t.badge}</p>
           <h3 className="mt-2 text-2xl font-semibold text-white sm:text-[1.7rem]">{t.title}</h3>
-          <p className="mt-3 max-w-2xl text-sm leading-7 text-slate-300">{t.subtitle}</p>
+          <p className="mt-3 max-w-2xl text-[0.98rem] leading-7 text-slate-300 sm:text-sm">{t.subtitle}</p>
         </div>
         <div className="flex flex-wrap gap-2">
           {t.thresholds.map((item) => (
@@ -152,7 +152,7 @@ export function RiceFlowCommandCenter({ locale }: { locale: Locale }) {
             </div>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3 xl:grid-cols-1">
+          <div className="grid gap-4 sm:grid-cols-3 xl:grid-cols-1">
             <MetricCard label={t.kpi1Label} value={t.kpi1Value} tone="bg-accent" />
             <MetricCard label={t.kpi2Label} value={t.kpi2Value} tone="bg-[#7aa7ff]" />
             <MetricCard label={t.kpi3Label} value={t.kpi3Value} tone="bg-[#ffb37a]" />
@@ -191,7 +191,7 @@ export function RiceFlowCommandCenter({ locale }: { locale: Locale }) {
               </div>
             </div>
 
-            <div className="grid gap-3 md:grid-cols-3">
+            <div className="grid gap-3 lg:grid-cols-3">
               {t.signalSteps.map((step) => (
                 <SignalStep key={step.title} title={step.title} description={step.description} />
               ))}
@@ -208,7 +208,7 @@ export function RiceFlowCommandCenter({ locale }: { locale: Locale }) {
                 {t.auditBadge}
               </span>
             </div>
-            <div className="mt-4 grid gap-3 md:grid-cols-3">
+            <div className="mt-4 grid gap-3 lg:grid-cols-3">
               {t.audit.map((item) => (
                 <div key={item} className="rounded-2xl border border-white/8 bg-[#132236] px-4 py-3 text-sm text-slate-300">
                   {item}

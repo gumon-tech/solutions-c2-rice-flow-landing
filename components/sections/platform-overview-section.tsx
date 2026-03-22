@@ -41,7 +41,7 @@ export function PlatformOverviewSection({ copy }: { copy: SiteDictionary }) {
             ))}
           </div>
 
-          <div className="lg:sticky lg:top-28 lg:self-start">
+          <div className="hidden lg:sticky lg:top-28 lg:block lg:self-start">
             <PlatformVisual />
           </div>
         </div>

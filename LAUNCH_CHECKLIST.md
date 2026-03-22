@@ -1,8 +1,8 @@
 # Rice Flow Launch Checklist
 
 ## Brand And Metadata
-- Confirm `https://riceflow.gumon.dev` in [`app/layout.tsx`](/Users/komphet/dev/solutions-c2-rice-flow-landing/app/layout.tsx) is the final production domain.
-- Confirm the final company contact email and CTA links in [`lib/site-copy.ts`](/Users/komphet/dev/solutions-c2-rice-flow-landing/lib/site-copy.ts).
+- Confirm `https://riceflow.app` in [`app/layout.tsx`](/Users/komphet/dev/solutions-c2-rice-flow-landing/app/layout.tsx) is the final production domain.
+- Confirm the final company contact email `hello@riceflow.app` and CTA links in [`lib/site-copy.ts`](/Users/komphet/dev/solutions-c2-rice-flow-landing/lib/site-copy.ts).
 - Review OG previews for `/en` and `/th` using the final deployed URL.
 - Verify browser tab icon, Apple touch icon, and manifest behavior on real devices.
 

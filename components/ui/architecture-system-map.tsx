@@ -200,7 +200,7 @@ export function ArchitectureSystemMap({ locale }: { locale: Locale }) {
               </div>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 md:grid-cols-2">
               {t.outcomes.map((item) => (
                 <div key={item.label} className="rounded-[24px] border border-white/10 bg-[#0d1727] p-5">
                   <p className="text-xs uppercase tracking-[0.22em] text-slate-500">{item.label}</p>

@@ -30,15 +30,21 @@ export function PageIntro({
       <Container>
         <div className="max-w-[52rem]">
           <Badge className="mb-5 border-accent/20 bg-accentSoft text-accent">{eyebrow}</Badge>
-          <h1 className="text-balance font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[4rem] lg:leading-[1.05]">
+          <h1 className="text-balance font-display text-[2.7rem] font-semibold tracking-tight leading-[1.05] text-white sm:text-5xl lg:text-[4rem] lg:leading-[1.05]">
             {title}
           </h1>
-          <p className="mt-6 max-w-[44rem] text-lg leading-8 text-slate-300">{description}</p>
+          <p className="mt-5 max-w-[44rem] text-[1rem] leading-7 text-slate-300 sm:mt-6 sm:text-lg sm:leading-8">
+            {description}
+          </p>
           {(primaryCta || secondaryCta) && (
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              {primaryCta ? <Button href={primaryCta.href}>{primaryCta.label}</Button> : null}
+              {primaryCta ? (
+                <Button href={primaryCta.href} className="min-h-12 w-full sm:w-auto">
+                  {primaryCta.label}
+                </Button>
+              ) : null}
               {secondaryCta ? (
-                <Button href={secondaryCta.href} variant="secondary">
+                <Button href={secondaryCta.href} variant="secondary" className="min-h-12 w-full sm:w-auto">
                   {secondaryCta.label}
                 </Button>
               ) : null}

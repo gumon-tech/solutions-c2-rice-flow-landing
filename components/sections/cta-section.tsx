@@ -31,7 +31,7 @@ export function CtaSection({
               </div>
               <div className="flex flex-col gap-3 sm:flex-row lg:min-w-[15rem] lg:flex-col">
                 <Button href={`/${locale}/contact`}>{copy.sections.cta.primaryCta}</Button>
-                <Button href="mailto:hello@riceflow.com?subject=Rice%20Flow%20Consultation" variant="secondary">
+                <Button href="mailto:hello@riceflow.app?subject=Rice%20Flow%20Consultation" variant="secondary">
                   {copy.sections.cta.secondaryCta}
                 </Button>
               </div>

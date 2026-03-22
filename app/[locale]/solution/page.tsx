@@ -12,7 +12,6 @@ import type { LocalePageProps } from "@/app/[locale]/layout";
 import { withLocale } from "@/lib/i18n";
 import { createLocaleMetadata } from "@/lib/metadata";
 import { getDictionary } from "@/lib/site-copy";
-import { OperationsVisualSection } from "@/components/sections/operations-visual-section";
 
 export async function generateMetadata({ params }: LocalePageProps): Promise<Metadata> {
   const { locale } = await params;
@@ -47,7 +46,6 @@ export default async function SolutionPage({ params }: LocalePageProps) {
             href: withLocale(locale, copy.pages.solution.secondaryCta?.href ?? "/architecture"),
           }}
         />
-        <OperationsVisualSection />
         <ProductExperienceSection locale={locale} />
         <SolutionOverviewSection copy={copy} />
         <ValuePropositionSection copy={copy} />
