@@ -60,18 +60,21 @@ export function SiteHeaderClient({
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/8 bg-slate-950/55 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-[#dbe9de] bg-[rgba(250,247,236,0.86)] backdrop-blur-xl">
       <Container className="py-3.5 sm:py-4">
         <div className="flex min-h-12 items-center justify-between gap-3 sm:gap-4">
-          <Link href={withLocale(locale, "/")} className="flex items-center">
+          <Link href={withLocale(locale, "/")} className="flex items-center gap-3">
             <Image
-              src="/brand/riceflow_logo_header.png"
+              src="/brand/favicon-512.png"
               alt={`${copy.brand.name} logo`}
-              width={960}
-              height={344}
-              className="h-auto w-[118px] sm:w-[126px] lg:w-[142px]"
+              width={512}
+              height={512}
+              className="h-11 w-11 shrink-0 sm:h-12 sm:w-12"
               priority
             />
+            <span className="text-base font-semibold tracking-[0.08em] text-[#176845] sm:text-lg">
+              {copy.brand.name}
+            </span>
           </Link>
 
           <nav className="hidden items-center gap-2 lg:flex">
@@ -86,8 +89,8 @@ export function SiteHeaderClient({
                   className={cn(
                     "rounded-full px-4 py-2 text-sm transition",
                     active
-                      ? "bg-white/[0.08] text-white"
-                      : "text-slate-300 hover:bg-white/[0.05] hover:text-white",
+                      ? "bg-[#dff4e8] text-[#176845]"
+                      : "text-[#587266] hover:bg-[#edf8f0] hover:text-[#176845]",
                   )}
                 >
                   {item.label}
@@ -100,7 +103,7 @@ export function SiteHeaderClient({
             <div className="relative" ref={localeMenuRef}>
               <button
                 type="button"
-                className="inline-flex min-h-12 min-w-[150px] items-center justify-between rounded-full border border-[#2a3d5f] bg-[#111827]/90 px-4 py-3 text-sm font-medium text-white transition hover:border-[#35507d] hover:bg-[#162033]"
+                className="inline-flex min-h-12 min-w-[150px] items-center justify-between rounded-full border border-[#cee1d3] bg-[rgba(255,252,243,0.92)] px-4 py-3 text-sm font-medium text-[#295243] transition hover:border-[#abd2ba] hover:bg-[#f2faf4]"
                 aria-haspopup="menu"
                 aria-expanded={isLocaleMenuOpen}
                 onClick={() => setIsLocaleMenuOpen((current) => !current)}
@@ -109,7 +112,7 @@ export function SiteHeaderClient({
                 <svg
                   viewBox="0 0 20 20"
                   fill="none"
-                  className={cn("h-4 w-4 text-slate-400 transition", isLocaleMenuOpen ? "rotate-180" : "")}
+                  className={cn("h-4 w-4 text-[#7a9085] transition", isLocaleMenuOpen ? "rotate-180" : "")}
                 >
                   <path
                     d="M5 7.5 10 12.5l5-5"
@@ -123,7 +126,7 @@ export function SiteHeaderClient({
 
               <div
                 className={cn(
-                  "absolute right-0 top-[calc(100%+0.75rem)] w-[200px] overflow-hidden rounded-[22px] border border-white/10 bg-[#191919]/95 p-2 shadow-panel backdrop-blur-xl transition",
+                  "absolute right-0 top-[calc(100%+0.75rem)] w-[200px] overflow-hidden rounded-[22px] border border-[#d7e6da] bg-[rgba(255,252,243,0.96)] p-2 shadow-panel backdrop-blur-xl transition",
                   isLocaleMenuOpen
                     ? "pointer-events-auto opacity-100 translate-y-0"
                     : "pointer-events-none -translate-y-1 opacity-0",
@@ -142,8 +145,8 @@ export function SiteHeaderClient({
                       className={cn(
                         "flex items-center justify-between rounded-2xl px-4 py-3 text-sm transition",
                         active
-                          ? "bg-[#1d5fb8] text-white"
-                          : "text-slate-200 hover:bg-white/[0.06] hover:text-white",
+                          ? "bg-[#18a56f] text-[#f8f7ef]"
+                          : "text-[#35584c] hover:bg-[#eef8f1] hover:text-[#176845]",
                       )}
                     >
                       <span>{label}</span>
@@ -168,7 +171,7 @@ export function SiteHeaderClient({
 
           <button
             type="button"
-            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-white transition hover:bg-white/[0.08] lg:hidden"
+            className="inline-flex h-12 w-12 items-center justify-center rounded-2xl border border-[#d5e4d8] bg-[rgba(255,252,243,0.88)] text-[#255144] transition hover:bg-[#f1f8f3] lg:hidden"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-navigation"
             aria-label={isMenuOpen ? copy.header.closeMenuLabel : copy.header.openMenuLabel}
@@ -204,8 +207,8 @@ export function SiteHeaderClient({
             isMenuOpen ? "mt-4 max-h-[560px] opacity-100" : "max-h-0 opacity-0",
           )}
         >
-          <div className="max-h-[70vh] overflow-y-auto rounded-3xl border border-white/10 bg-slate-950/80 p-4 shadow-panel">
-            <div className="mb-4 rounded-2xl border border-white/10 bg-white/[0.03] p-2">
+          <div className="max-h-[70vh] overflow-y-auto rounded-3xl border border-[#d8e7db] bg-[rgba(250,247,236,0.96)] p-4 shadow-panel">
+            <div className="mb-4 rounded-2xl border border-[#d8e7db] bg-[rgba(255,252,243,0.92)] p-2">
               <div className="grid grid-cols-2 gap-2">
                 {Object.entries(localeLabels).map(([targetLocale, label]) => {
                   const active = targetLocale === locale;
@@ -217,8 +220,8 @@ export function SiteHeaderClient({
                       className={cn(
                         "rounded-2xl px-3 py-3 text-center text-sm transition",
                         active
-                          ? "bg-[#1d5fb8] text-white"
-                          : "text-slate-300 hover:bg-white/[0.05] hover:text-white",
+                          ? "bg-[#18a56f] text-[#f8f7ef]"
+                          : "text-[#4e685d] hover:bg-[#eef8f1] hover:text-[#176845]",
                       )}
                     >
                       {label}
@@ -239,9 +242,9 @@ export function SiteHeaderClient({
                     className={cn(
                       "rounded-2xl px-4 py-3.5 text-[0.95rem] transition",
                       active
-                        ? "bg-white/[0.08] text-white"
-                        : "text-slate-300 hover:bg-white/[0.05] hover:text-white",
-                    )}
+                        ? "bg-[#dff4e8] text-[#176845]"
+                        : "text-[#4e685d] hover:bg-[#eef8f1] hover:text-[#176845]",
+                      )}
                   >
                     {item.label}
                   </Link>

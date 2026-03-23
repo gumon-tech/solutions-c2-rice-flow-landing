@@ -24,7 +24,7 @@ const config: Config = {
         display: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        panel: "0 24px 80px rgba(7, 16, 28, 0.28)",
+        panel: "0 24px 70px rgba(31, 92, 67, 0.12)",
       },
       backgroundImage: {
         "grid-fade":

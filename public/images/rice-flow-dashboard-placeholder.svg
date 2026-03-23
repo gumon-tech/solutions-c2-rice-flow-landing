@@ -1,27 +1,27 @@
 <svg width="960" height="720" viewBox="0 0 960 720" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="960" height="720" rx="28" fill="#07101C"/>
-  <rect x="24" y="24" width="912" height="672" rx="24" fill="#0C1828" stroke="#20334C"/>
-  <rect x="52" y="52" width="240" height="72" rx="18" fill="#101F32"/>
-  <rect x="76" y="74" width="108" height="12" rx="6" fill="#48D7C3"/>
-  <rect x="76" y="96" width="164" height="10" rx="5" fill="#6F859F"/>
-  <rect x="52" y="152" width="856" height="220" rx="22" fill="#0B1422" stroke="#20334C"/>
-  <path d="M108 311C163.333 260.333 218.667 235 274 235C329.333 235 384.667 296 440 296C495.333 296 550.667 190 606 190C661.333 190 716.667 284 772 284C809.333 284 842.667 270.667 872 244" stroke="#48D7C3" stroke-width="6" stroke-linecap="round"/>
-  <circle cx="440" cy="296" r="10" fill="#48D7C3"/>
-  <circle cx="606" cy="190" r="10" fill="#48D7C3"/>
-  <rect x="52" y="400" width="272" height="124" rx="22" fill="#101F32"/>
-  <rect x="344" y="400" width="272" height="124" rx="22" fill="#101F32"/>
-  <rect x="636" y="400" width="272" height="124" rx="22" fill="#101F32"/>
-  <rect x="52" y="548" width="564" height="116" rx="22" fill="#0B1422" stroke="#20334C"/>
-  <rect x="636" y="548" width="272" height="116" rx="22" fill="#101F32"/>
-  <rect x="80" y="428" width="76" height="10" rx="5" fill="#6F859F"/>
-  <rect x="80" y="452" width="112" height="32" rx="16" fill="#48D7C3"/>
-  <rect x="372" y="428" width="76" height="10" rx="5" fill="#6F859F"/>
-  <rect x="372" y="452" width="112" height="32" rx="16" fill="#FFAD7A"/>
-  <rect x="664" y="428" width="76" height="10" rx="5" fill="#6F859F"/>
-  <rect x="664" y="452" width="112" height="32" rx="16" fill="#77A7FF"/>
-  <rect x="80" y="578" width="112" height="10" rx="5" fill="#6F859F"/>
-  <rect x="80" y="604" width="504" height="14" rx="7" fill="#15263A"/>
-  <rect x="80" y="604" width="348" height="14" rx="7" fill="#48D7C3"/>
-  <rect x="664" y="578" width="92" height="10" rx="5" fill="#6F859F"/>
-  <rect x="664" y="606" width="120" height="12" rx="6" fill="#48D7C3"/>
+  <rect width="960" height="720" rx="28" fill="#F8F4E2"/>
+  <rect x="24" y="24" width="912" height="672" rx="24" fill="#FFFDF6" stroke="#D9E7DB"/>
+  <rect x="52" y="52" width="240" height="72" rx="18" fill="#F3FAF5"/>
+  <rect x="76" y="74" width="108" height="12" rx="6" fill="#18A56F"/>
+  <rect x="76" y="96" width="164" height="10" rx="5" fill="#8AA095"/>
+  <rect x="52" y="152" width="856" height="220" rx="22" fill="#F8FBF6" stroke="#D9E7DB"/>
+  <path d="M108 311C163.333 260.333 218.667 235 274 235C329.333 235 384.667 296 440 296C495.333 296 550.667 190 606 190C661.333 190 716.667 284 772 284C809.333 284 842.667 270.667 872 244" stroke="#18A56F" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="440" cy="296" r="10" fill="#18A56F"/>
+  <circle cx="606" cy="190" r="10" fill="#18A56F"/>
+  <rect x="52" y="400" width="272" height="124" rx="22" fill="#FFFBF2"/>
+  <rect x="344" y="400" width="272" height="124" rx="22" fill="#FFFBF2"/>
+  <rect x="636" y="400" width="272" height="124" rx="22" fill="#FFFBF2"/>
+  <rect x="52" y="548" width="564" height="116" rx="22" fill="#F8FBF6" stroke="#D9E7DB"/>
+  <rect x="636" y="548" width="272" height="116" rx="22" fill="#FFFBF2"/>
+  <rect x="80" y="428" width="76" height="10" rx="5" fill="#8AA095"/>
+  <rect x="80" y="452" width="112" height="32" rx="16" fill="#18A56F"/>
+  <rect x="372" y="428" width="76" height="10" rx="5" fill="#8AA095"/>
+  <rect x="372" y="452" width="112" height="32" rx="16" fill="#F3C95E"/>
+  <rect x="664" y="428" width="76" height="10" rx="5" fill="#8AA095"/>
+  <rect x="664" y="452" width="112" height="32" rx="16" fill="#9BDDBA"/>
+  <rect x="80" y="578" width="112" height="10" rx="5" fill="#8AA095"/>
+  <rect x="80" y="604" width="504" height="14" rx="7" fill="#DCEFE4"/>
+  <rect x="80" y="604" width="348" height="14" rx="7" fill="#18A56F"/>
+  <rect x="664" y="578" width="92" height="10" rx="5" fill="#8AA095"/>
+  <rect x="664" y="606" width="120" height="12" rx="6" fill="#18A56F"/>
 </svg>
