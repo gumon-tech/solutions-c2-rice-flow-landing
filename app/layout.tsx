@@ -13,7 +13,7 @@ const manrope = Manrope({
 const defaultCopy = getDictionary("en");
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://riceflow.app"),
+  metadataBase: new URL("https://riceflow.gumon.dev"),
   title: defaultCopy.metadata.siteTitle,
   description: defaultCopy.metadata.siteDescription,
   keywords: defaultCopy.metadata.keywords,
