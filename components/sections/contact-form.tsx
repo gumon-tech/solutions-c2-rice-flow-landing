@@ -18,7 +18,7 @@ function SubmitButton({
     <button
       type="submit"
       disabled={pending}
-      className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-[#159763] bg-[linear-gradient(135deg,#1db777_0%,#159763_100%)] px-5 py-3 text-sm font-semibold tracking-wide text-[#f8f7ef] transition hover:-translate-y-0.5 hover:bg-[#12925d] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 sm:w-auto"
+      className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-[color:var(--accent)] bg-[linear-gradient(135deg,color-mix(in_srgb,var(--accent)_90%,white_10%)_0%,var(--accent)_100%)] px-5 py-3 text-sm font-semibold tracking-wide text-[color:var(--accent-foreground)] transition hover:-translate-y-0.5 hover:brightness-105 disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 sm:w-auto"
     >
       {pending ? pendingLabel : idleLabel}
     </button>
@@ -54,12 +54,12 @@ function Field({
 }: FieldProps) {
   const error = errors?.[name];
   const baseClassName = cn(
-    "rounded-2xl border bg-[rgba(255,252,243,0.88)] px-4 py-3 text-[#173b30] outline-none transition placeholder:text-[#93a69d] focus:border-accent/60",
-    error ? "border-rose-400/60" : "border-[#d7e6da]",
+    "rounded-2xl border bg-[color:var(--theme-surface-1)] px-4 py-3 text-[color:var(--foreground)] outline-none transition placeholder:text-[color:var(--foreground-faint)] focus:border-accent/60",
+    error ? "border-rose-400/60" : "border-[color:var(--theme-border-soft)]",
   );
 
   return (
-    <label className="grid gap-2 text-sm text-[#567267]">
+    <label className="grid gap-2 text-sm text-[color:var(--foreground-soft)]">
       {label}
       {as === "textarea" ? (
         <textarea
@@ -78,11 +78,11 @@ function Field({
           aria-invalid={Boolean(error)}
           aria-describedby={error ? `${name}-error` : undefined}
         >
-          <option value="" className="bg-[#fffdf6]">
+          <option value="" className="bg-[color:var(--theme-surface-3)]">
             {placeholder}
           </option>
           {options.map((option) => (
-            <option key={option} value={option} className="bg-[#fffdf6]">
+            <option key={option} value={option} className="bg-[color:var(--theme-surface-3)]">
               {option}
             </option>
           ))}

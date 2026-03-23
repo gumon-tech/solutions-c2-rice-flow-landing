@@ -30,16 +30,16 @@ const statusCards = [
 export function ControlInfrastructureVisual() {
   return (
     <SurfaceCard className="overflow-hidden p-5 sm:p-6">
-      <div className="rounded-[28px] border border-[#d7e6da] bg-[linear-gradient(180deg,#fffdf6_0%,#eef8f1_100%)] p-5 sm:p-6">
+      <div className="rounded-[28px] border border-[color:var(--theme-border-soft)] bg-[image:var(--card-gradient)] p-5 sm:p-6">
         <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-[#86a094]">Platform topology</p>
-            <h3 className="mt-2 text-xl font-semibold text-[#173b30]">Rice Flow Control Infrastructure</h3>
+            <p className="text-xs uppercase tracking-[0.28em] text-[color:var(--foreground-muted)]">Platform topology</p>
+            <h3 className="mt-2 text-xl font-semibold text-[color:var(--foreground)]">Rice Flow Control Infrastructure</h3>
           </div>
           <Badge className="border-accent/20 bg-accentSoft text-accent">Control Room Ready</Badge>
         </div>
 
-        <div className="rounded-[24px] border border-[#d7e6da] bg-[rgba(255,252,243,0.88)] p-5">
+        <div className="rounded-[24px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] p-5">
           <div className="grid gap-4 lg:grid-cols-[0.8fr_0.8fr_1.2fr_1fr]">
             {layers.map((layer, index) => (
               <div key={layer.title} className="relative">
@@ -47,13 +47,13 @@ export function ControlInfrastructureVisual() {
                   <div className="absolute right-[-14px] top-1/2 hidden h-0.5 w-7 -translate-y-1/2 bg-gradient-to-r from-accent to-accent/20 lg:block" />
                 ) : null}
 
-                <div className="rounded-[24px] border border-[#d7e6da] bg-[#f8fbf6] p-4">
-                  <p className="text-xs uppercase tracking-[0.2em] text-[#86a094]">{layer.title}</p>
+                <div className="rounded-[24px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)] p-4">
+                  <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--foreground-muted)]">{layer.title}</p>
                   <div className="mt-4 space-y-3">
                     {layer.points.map((point, itemIndex) => (
                       <div
                         key={point}
-                        className="rounded-2xl border border-[#d7e6da] bg-[rgba(255,252,243,0.88)] px-4 py-3"
+                        className="rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-4 py-3"
                       >
                         <div
                           className={`mb-3 h-2 rounded-full ${
@@ -67,7 +67,7 @@ export function ControlInfrastructureVisual() {
                             width: `${58 + ((index + itemIndex) % 3) * 14}px`,
                           }}
                         />
-                        <p className="text-sm text-[#4e685d]">{point}</p>
+                        <p className="text-sm text-[color:var(--foreground-soft)]">{point}</p>
                       </div>
                     ))}
                   </div>
@@ -81,11 +81,11 @@ export function ControlInfrastructureVisual() {
           {statusCards.map((card) => (
             <div
               key={card.label}
-              className="rounded-[24px] border border-[#d7e6da] bg-[rgba(248,251,246,0.92)] p-5"
+              className="rounded-[24px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)] p-5"
             >
-              <p className="text-xs uppercase tracking-[0.2em] text-[#86a094]">{card.label}</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--foreground-muted)]">{card.label}</p>
               <div className={`mt-4 h-2 w-20 rounded-full ${card.tone}`} />
-              <p className="mt-4 text-3xl font-semibold text-[#173b30]">{card.value}</p>
+              <p className="mt-4 text-3xl font-semibold text-[color:var(--foreground)]">{card.value}</p>
             </div>
           ))}
         </div>

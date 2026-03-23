@@ -21,13 +21,15 @@ export function PlatformOverviewSection({ copy }: { copy: SiteDictionary }) {
             {copy.platformPillars.map((pillar) => (
               <SurfaceCard key={pillar.title} className="p-6">
                 <div className="flex flex-col gap-5 sm:flex-row sm:items-start">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-accent">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] text-accent">
                     <Icon name={pillar.icon} className="h-5 w-5" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-white">{pillar.title}</h3>
-                    <p className="mt-3 text-sm leading-7 text-slate-300">{pillar.description}</p>
-                    <ul className="mt-5 space-y-2.5 text-sm text-slate-400">
+                    <h3 className="text-xl font-semibold text-[color:var(--foreground-on-panel)]">{pillar.title}</h3>
+                    <p className="mt-3 text-sm leading-7 text-[color:var(--foreground-soft-on-panel)]">
+                      {pillar.description}
+                    </p>
+                    <ul className="mt-5 space-y-2.5 text-sm text-[color:var(--foreground-muted)]">
                       {pillar.supportingPoints.map((point) => (
                         <li key={point} className="flex items-start gap-3">
                           <span className="mt-2 h-1.5 w-1.5 rounded-full bg-accent" />

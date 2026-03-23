@@ -17,11 +17,11 @@ export function CoreCapabilitiesSection({ copy }: { copy: SiteDictionary }) {
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
           {copy.capabilityCards.map((card) => (
             <SurfaceCard key={card.title} className="flex h-full flex-col p-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-accent">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] text-accent">
                 <Icon name={card.icon} className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 text-lg font-semibold text-white">{card.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{card.description}</p>
+              <h3 className="mt-5 text-lg font-semibold text-[color:var(--foreground-on-panel)]">{card.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-[color:var(--foreground-soft-on-panel)]">{card.description}</p>
             </SurfaceCard>
           ))}
         </div>

@@ -17,7 +17,7 @@ function HeroCta({
     <div className="flex flex-col gap-3 sm:flex-row">
       <Button
         href={`/${locale}/contact`}
-        className="group min-h-14 w-full border-0 bg-[linear-gradient(135deg,#1db777_0%,#19a46f_60%,#f1d66d_100%)] px-7 text-base font-semibold text-[#f9f7ef] shadow-[0_18px_48px_rgba(24,165,111,0.18)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_24px_60px_rgba(24,165,111,0.26)] sm:w-auto"
+        className="group min-h-14 w-full border-0 bg-[linear-gradient(135deg,color-mix(in_srgb,var(--accent)_88%,white_12%)_0%,var(--accent)_62%,var(--warm)_100%)] px-7 text-base font-semibold text-[color:var(--accent-foreground)] shadow-[0_18px_48px_var(--theme-shadow-accent)] transition duration-300 hover:-translate-y-1 hover:brightness-105 sm:w-auto"
       >
         <span>{copy.primaryCta}</span>
         <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">
@@ -27,7 +27,7 @@ function HeroCta({
       <Button
         href={`/${locale}${copy.secondaryCtaHref}`}
         variant="secondary"
-        className="min-h-14 w-full border-[#d5e4d8] bg-[rgba(255,252,243,0.82)] px-7 text-base text-[#35584c] hover:border-[#b7d8c3] hover:bg-[rgba(241,249,243,0.95)] sm:w-auto"
+        className="min-h-14 w-full border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-0)] px-7 text-base text-[color:var(--foreground-soft)] hover:border-[color:var(--theme-border-strong)] hover:bg-[color:var(--theme-surface-2)] sm:w-auto"
       >
         {copy.secondaryCta}
       </Button>
@@ -60,11 +60,13 @@ export function HeroSection({
       <Container>
         <div className="max-w-[74rem]">
           <div className="max-w-[66rem]">
-            <Badge className="border-[#d5e4d8] bg-[rgba(255,252,243,0.9)] text-[#5a7668]">{copy.hero.kicker}</Badge>
-            <h1 className="mt-7 max-w-[16ch] text-pretty font-display text-[2.9rem] font-semibold leading-[1.06] tracking-tight text-[#153a2f] sm:text-[3.6rem] lg:text-[5.1rem]">
+            <Badge className="bg-[color:var(--theme-surface-2)] text-[color:var(--foreground-soft)]">
+              {copy.hero.kicker}
+            </Badge>
+            <h1 className="mt-7 max-w-[16ch] text-pretty font-display text-[2.9rem] font-semibold leading-[1.06] tracking-tight text-[color:var(--foreground)] sm:text-[3.6rem] lg:text-[5.1rem]">
               {copy.hero.title}
             </h1>
-            <p className="mt-8 max-w-[58rem] text-pretty text-[1.18rem] leading-9 text-[#5d776b] sm:text-[1.28rem]">
+            <p className="mt-8 max-w-[58rem] text-pretty text-[1.18rem] leading-9 text-[color:var(--foreground-soft)] sm:text-[1.28rem]">
               {copy.hero.summary}
             </p>
             <div className="mt-9">

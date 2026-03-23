@@ -17,11 +17,13 @@ export function ProblemSection({ copy }: { copy: SiteDictionary }) {
         <div className="mt-10 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
           {copy.problemCards.map((card) => (
             <SurfaceCard key={card.title} className="p-6 sm:p-6">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-accent">
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] text-accent">
                 <Icon name={card.icon} className="h-5 w-5" />
               </div>
-              <h3 className="mt-5 text-[1.375rem] font-semibold leading-8 text-white sm:text-xl">{card.title}</h3>
-              <p className="mt-3 text-[0.98rem] leading-8 text-slate-300 sm:text-sm sm:leading-7">
+              <h3 className="mt-5 text-[1.375rem] font-semibold leading-8 text-[color:var(--foreground-on-panel)] sm:text-xl">
+                {card.title}
+              </h3>
+              <p className="mt-3 text-[0.98rem] leading-8 text-[color:var(--foreground-soft-on-panel)] sm:text-sm sm:leading-7">
                 {card.description}
               </p>
             </SurfaceCard>

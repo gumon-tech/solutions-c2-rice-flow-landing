@@ -111,18 +111,18 @@ export function RiceFlowCommandCenter({ locale }: { locale: Locale }) {
   const t = copy[locale];
 
   return (
-    <div className="rounded-[32px] border border-[#d9e7db] bg-[linear-gradient(180deg,rgba(255,253,246,0.96),rgba(238,248,241,0.94))] p-4 shadow-panel sm:p-6">
-      <div className="flex flex-wrap items-start justify-between gap-4 border-b border-[#d9e7db] pb-5">
+    <div className="rounded-[32px] border border-[color:var(--theme-border-soft)] bg-[image:var(--card-gradient)] p-4 shadow-panel sm:p-6">
+      <div className="flex flex-wrap items-start justify-between gap-4 border-b border-[color:var(--theme-border-soft)] pb-5">
         <div>
-          <p className="text-xs uppercase tracking-[0.28em] text-[#86a094]">{t.badge}</p>
-          <h3 className="mt-2 text-2xl font-semibold text-[#173b30] sm:text-[1.7rem]">{t.title}</h3>
-          <p className="mt-3 max-w-2xl text-[0.98rem] leading-7 text-[#5d786b] sm:text-sm">{t.subtitle}</p>
+          <p className="text-xs uppercase tracking-[0.28em] text-[color:var(--foreground-muted)]">{t.badge}</p>
+          <h3 className="mt-2 text-2xl font-semibold text-[color:var(--foreground)] sm:text-[1.7rem]">{t.title}</h3>
+          <p className="mt-3 max-w-2xl text-[0.98rem] leading-7 text-[color:var(--foreground-soft)] sm:text-sm">{t.subtitle}</p>
         </div>
         <div className="flex flex-wrap gap-2">
           {t.thresholds.map((item) => (
             <span
               key={item}
-              className="rounded-full border border-[#d7e6da] bg-[rgba(255,252,243,0.88)] px-3 py-1.5 text-xs text-[#557166]"
+              className="rounded-full border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-3 py-1.5 text-xs text-[color:var(--foreground-soft)]"
             >
               {item}
             </span>
@@ -132,21 +132,21 @@ export function RiceFlowCommandCenter({ locale }: { locale: Locale }) {
 
       <div className="mt-5 grid gap-4 xl:grid-cols-[0.95fr_1.2fr_0.85fr]">
         <div className="grid gap-4">
-          <div className="rounded-[24px] border border-[#d7e6da] bg-[rgba(255,252,243,0.9)] p-4">
+          <div className="rounded-[24px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] p-4">
             <div className="flex items-center justify-between gap-3">
-              <p className="text-xs uppercase tracking-[0.22em] text-[#86a094]">{t.sitesLabel}</p>
+              <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--foreground-muted)]">{t.sitesLabel}</p>
               <span className="h-2.5 w-2.5 rounded-full bg-accent" />
             </div>
             <div className="mt-4 space-y-3">
               {t.sites.map((site) => (
-                <div key={site.name} className="rounded-2xl border border-[#d7e6da] bg-[#f8fbf6] p-4">
+                <div key={site.name} className="rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)] p-4">
                   <div className="flex items-center justify-between gap-3">
-                    <p className="text-sm font-semibold text-[#173b30]">{site.name}</p>
-                    <span className="rounded-full border border-[#d7e6da] bg-[rgba(255,252,243,0.88)] px-2.5 py-1 text-[11px] uppercase tracking-[0.16em] text-[#557166]">
+                    <p className="text-sm font-semibold text-[color:var(--foreground)]">{site.name}</p>
+                    <span className="rounded-full border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-2.5 py-1 text-[11px] uppercase tracking-[0.16em] text-[color:var(--foreground-soft)]">
                       {site.metric}
                     </span>
                   </div>
-                  <p className="mt-2 text-sm text-[#638074]">{site.state}</p>
+                  <p className="mt-2 text-sm text-[color:var(--foreground-soft)]">{site.state}</p>
                 </div>
               ))}
             </div>
@@ -160,31 +160,31 @@ export function RiceFlowCommandCenter({ locale }: { locale: Locale }) {
         </div>
 
         <div className="grid gap-4">
-          <div className="rounded-[24px] border border-[#d7e6da] bg-[rgba(255,252,243,0.9)] p-4">
+          <div className="rounded-[24px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] p-4">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
-                <p className="text-xs uppercase tracking-[0.22em] text-[#86a094]">{t.telemetryLabel}</p>
-                <p className="mt-2 text-base font-semibold text-[#173b30]">{t.telemetryTitle}</p>
+                <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--foreground-muted)]">{t.telemetryLabel}</p>
+                <p className="mt-2 text-base font-semibold text-[color:var(--foreground)]">{t.telemetryTitle}</p>
               </div>
-              <span className="rounded-full border border-[#d7e6da] bg-[rgba(248,251,246,0.92)] px-3 py-1 text-xs text-[#557166]">
+              <span className="rounded-full border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)] px-3 py-1 text-xs text-[color:var(--foreground-soft)]">
                 {t.telemetryRange}
               </span>
             </div>
 
-            <div className="mt-5 rounded-[20px] border border-[#d7e6da] bg-[#f8fbf6] p-4">
+            <div className="mt-5 rounded-[20px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)] p-4">
               <div className="relative h-40 sm:h-48">
                 <div className="absolute inset-x-0 top-[22%] border-t border-dashed border-[#e7b34c]/70" />
                 <div className="absolute inset-x-0 top-[52%] border-t border-dashed border-[#8ed7b5]/60" />
                 <div className="flex h-full items-end gap-2 sm:gap-3">
                   {trendBars.map((bar, index) => (
                     <div key={bar.time} className="flex flex-1 flex-col items-center gap-2">
-                      <div className="relative w-full rounded-t-2xl bg-[#dcefe4]" style={{ height: `${bar.height * 1.75}px` }}>
+                      <div className="relative w-full rounded-t-2xl bg-[color:color-mix(in_srgb,var(--accent)_12%,var(--theme-surface-4))]" style={{ height: `${bar.height * 1.75}px` }}>
                         <div className="absolute inset-x-0 top-0 h-2 rounded-t-2xl bg-accent" />
                         {index > 0 ? (
                           <div className="absolute -left-3 top-6 hidden h-0.5 w-6 bg-gradient-to-r from-accent to-[#8ed7b5] md:block" />
                         ) : null}
                       </div>
-                      <span className="text-[11px] uppercase tracking-[0.18em] text-[#88a095]">{bar.time}</span>
+                      <span className="text-[11px] uppercase tracking-[0.18em] text-[color:var(--foreground-muted)]">{bar.time}</span>
                     </div>
                   ))}
                 </div>
@@ -198,19 +198,19 @@ export function RiceFlowCommandCenter({ locale }: { locale: Locale }) {
             </div>
           </div>
 
-          <div className="rounded-[24px] border border-[#d7e6da] bg-[rgba(248,251,246,0.92)] p-4">
+          <div className="rounded-[24px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)] p-4">
             <div className="flex items-center justify-between gap-3">
               <div>
-                <p className="text-xs uppercase tracking-[0.22em] text-[#86a094]">{t.auditLabel}</p>
-                <p className="mt-2 text-base font-semibold text-[#173b30]">{t.auditTitle}</p>
+                <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--foreground-muted)]">{t.auditLabel}</p>
+                <p className="mt-2 text-base font-semibold text-[color:var(--foreground)]">{t.auditTitle}</p>
               </div>
-              <span className="rounded-full border border-[#d7e6da] bg-[rgba(255,252,243,0.88)] px-3 py-1 text-xs text-[#557166]">
+              <span className="rounded-full border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-3 py-1 text-xs text-[color:var(--foreground-soft)]">
                 {t.auditBadge}
               </span>
             </div>
             <div className="mt-4 grid gap-3 lg:grid-cols-3">
               {t.audit.map((item) => (
-                <div key={item} className="rounded-2xl border border-[#d7e6da] bg-[#f8fbf6] px-4 py-3 text-sm text-[#4e685d]">
+                <div key={item} className="rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-4 py-3 text-sm text-[color:var(--foreground-soft)]">
                   {item}
                 </div>
               ))}
@@ -219,45 +219,45 @@ export function RiceFlowCommandCenter({ locale }: { locale: Locale }) {
         </div>
 
         <div className="grid gap-4">
-          <div className="rounded-[24px] border border-[#d7e6da] bg-[rgba(255,252,243,0.9)] p-4">
+          <div className="rounded-[24px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] p-4">
             <div className="flex flex-wrap items-start justify-between gap-3">
               <div>
-                <p className="text-xs uppercase tracking-[0.22em] text-[#86a094]">{t.queueLabel}</p>
-                <p className="mt-2 text-base font-semibold text-[#173b30]">{t.queueTitle}</p>
+                <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--foreground-muted)]">{t.queueLabel}</p>
+                <p className="mt-2 text-base font-semibold text-[color:var(--foreground)]">{t.queueTitle}</p>
               </div>
-              <span className="rounded-full border border-[#d7e6da] bg-[rgba(255,252,243,0.88)] px-3 py-1 text-xs text-[#557166]">
+              <span className="rounded-full border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-3 py-1 text-xs text-[color:var(--foreground-soft)]">
                 {t.queueCount}
               </span>
             </div>
             <div className="mt-4 space-y-3">
               {t.queue.map((item) => (
-                <div key={item.title} className="rounded-2xl border border-[#d7e6da] bg-[#f8fbf6] p-4">
+                <div key={item.title} className="rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)] p-4">
                   <div className="flex items-center justify-between gap-3">
-                    <p className="text-sm font-semibold text-[#173b30]">{item.title}</p>
+                    <p className="text-sm font-semibold text-[color:var(--foreground)]">{item.title}</p>
                     <span className={`h-2.5 w-2.5 rounded-full ${item.tone}`} />
                   </div>
-                  <p className="mt-2 text-sm text-[#638074]">{item.state}</p>
+                  <p className="mt-2 text-sm text-[color:var(--foreground-soft)]">{item.state}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="rounded-[24px] border border-[#d7e6da] bg-[rgba(248,251,246,0.92)] p-4">
-            <p className="text-xs uppercase tracking-[0.22em] text-[#86a094]">{t.maintenanceLabel}</p>
+          <div className="rounded-[24px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)] p-4">
+            <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--foreground-muted)]">{t.maintenanceLabel}</p>
             <div className="mt-4 space-y-3">
               {t.maintenance.map((item) => (
-                <div key={item} className="rounded-2xl border border-[#d7e6da] bg-[#f8fbf6] px-4 py-3 text-sm text-[#4e685d]">
+                <div key={item} className="rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-4 py-3 text-sm text-[color:var(--foreground-soft)]">
                   {item}
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="rounded-[24px] border border-[#d7e6da] bg-[rgba(248,251,246,0.92)] p-4">
-            <p className="text-xs uppercase tracking-[0.22em] text-[#86a094]">{t.accessLabel}</p>
+          <div className="rounded-[24px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)] p-4">
+            <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--foreground-muted)]">{t.accessLabel}</p>
             <div className="mt-4 grid gap-3">
               {t.access.map((item) => (
-                <div key={item} className="rounded-2xl border border-[#d7e6da] bg-[#f8fbf6] px-4 py-3 text-sm text-[#4e685d]">
+                <div key={item} className="rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-4 py-3 text-sm text-[color:var(--foreground-soft)]">
                   {item}
                 </div>
               ))}
@@ -279,10 +279,10 @@ function MetricCard({
   tone: string;
 }) {
   return (
-    <div className="rounded-[24px] border border-[#d7e6da] bg-[rgba(255,252,243,0.9)] p-4">
-      <p className="text-xs uppercase tracking-[0.22em] text-[#86a094]">{label}</p>
+    <div className="rounded-[24px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] p-4">
+      <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--foreground-muted)]">{label}</p>
       <div className={`mt-3 h-2 w-16 rounded-full ${tone}`} />
-      <p className="mt-4 text-3xl font-semibold text-[#173b30]">{value}</p>
+      <p className="mt-4 text-3xl font-semibold text-[color:var(--foreground)]">{value}</p>
     </div>
   );
 }
@@ -295,9 +295,9 @@ function SignalStep({
   description: string;
 }) {
   return (
-    <div className="rounded-2xl border border-[#d7e6da] bg-[#f8fbf6] px-4 py-3">
-      <p className="text-xs uppercase tracking-[0.18em] text-[#86a094]">{title}</p>
-      <p className="mt-2 text-sm font-medium leading-6 text-[#35584c]">{description}</p>
+    <div className="rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-4 py-3">
+      <p className="text-xs uppercase tracking-[0.18em] text-[color:var(--foreground-muted)]">{title}</p>
+      <p className="mt-2 text-sm font-medium leading-6 text-[color:var(--foreground-soft)]">{description}</p>
     </div>
   );
 }

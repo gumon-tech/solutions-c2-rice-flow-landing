@@ -1,6 +1,7 @@
 import type { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: ["class", '[data-theme="dark"]'],
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
@@ -24,11 +25,10 @@ const config: Config = {
         display: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       boxShadow: {
-        panel: "0 24px 70px rgba(31, 92, 67, 0.12)",
+        panel: "var(--shadow-panel)",
       },
       backgroundImage: {
-        "grid-fade":
-          "linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)",
+        "grid-fade": "var(--grid-fade)",
       },
       animation: {
         float: "float 8s ease-in-out infinite",

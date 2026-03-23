@@ -18,12 +18,17 @@ export function ValuePropositionSection({ copy }: { copy: SiteDictionary }) {
           <SurfaceCard className="p-5 sm:p-7">
             <div className="grid gap-5 sm:grid-cols-2">
               {copy.valueCards.map((card) => (
-                <div key={card.title} className="rounded-2xl border border-white/10 bg-white/[0.03] p-5 sm:p-6">
+                <div
+                  key={card.title}
+                  className="rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] p-5 sm:p-6"
+                >
                   <div className="flex items-center gap-3 text-accent">
                     <Icon name={card.icon} className="h-5 w-5" />
-                    <h3 className="text-[1.0625rem] font-semibold text-white sm:text-base">{card.title}</h3>
+                    <h3 className="text-[1.0625rem] font-semibold text-[color:var(--foreground-on-panel)] sm:text-base">
+                      {card.title}
+                    </h3>
                   </div>
-                  <p className="mt-3 text-[0.98rem] leading-8 text-slate-300 sm:text-sm sm:leading-7">
+                  <p className="mt-3 text-[0.98rem] leading-8 text-[color:var(--foreground-soft-on-panel)] sm:text-sm sm:leading-7">
                     {card.description}
                   </p>
                 </div>

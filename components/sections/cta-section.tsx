@@ -16,16 +16,16 @@ export function CtaSection({
     <section id="contact" className="py-16 sm:py-24">
       <Container>
         <SurfaceCard className="relative overflow-hidden p-8 sm:p-10 lg:p-12">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(24,165,111,0.18),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(241,214,109,0.14),transparent_28%)]" />
-          <div className="absolute inset-0 bg-[linear-gradient(135deg,rgba(255,255,255,0.18),transparent_35%,rgba(255,248,225,0.12)_100%)]" />
+          <div className="absolute inset-0 bg-[image:var(--overlay-radial)]" />
+          <div className="absolute inset-0 bg-[image:var(--overlay-glass)]" />
           <div className="relative">
             <Badge className="mb-5 border-accent/20 bg-accentSoft text-accent">{copy.sections.cta.eyebrow}</Badge>
             <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-center">
               <div className="max-w-[44rem]">
-                <h2 className="text-balance font-display text-3xl font-semibold tracking-tight text-[#173b30] sm:text-4xl lg:text-[2.95rem] lg:leading-[1.08]">
+                <h2 className="text-balance font-display text-3xl font-semibold tracking-tight text-[color:var(--foreground)] sm:text-4xl lg:text-[2.95rem] lg:leading-[1.08]">
                   {copy.sections.cta.title}
                 </h2>
-                <p className="mt-5 text-base leading-8 text-[#5d786b] sm:text-lg">
+                <p className="mt-5 text-base leading-8 text-[color:var(--foreground-soft)] sm:text-lg">
                   {copy.sections.cta.description}
                 </p>
               </div>

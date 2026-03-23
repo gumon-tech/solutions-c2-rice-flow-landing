@@ -17,11 +17,11 @@ export function DesignPrinciplesSection({ copy }: { copy: SiteDictionary }) {
         <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {copy.principleCards.map((card) => (
             <SurfaceCard key={card.title} className="p-5">
-              <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04] text-accent">
+              <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] text-accent">
                 <Icon name={card.icon} className="h-5 w-5" />
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-white">{card.title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{card.description}</p>
+              <h3 className="mt-4 text-lg font-semibold text-[color:var(--foreground-on-panel)]">{card.title}</h3>
+              <p className="mt-3 text-sm leading-7 text-[color:var(--foreground-soft-on-panel)]">{card.description}</p>
             </SurfaceCard>
           ))}
         </div>

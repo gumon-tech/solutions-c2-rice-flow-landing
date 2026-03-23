@@ -118,31 +118,31 @@ export function ArchitectureSystemMap({ locale }: { locale: Locale }) {
 
   return (
     <SurfaceCard className="overflow-hidden p-5 sm:p-6">
-      <div className="rounded-[30px] border border-[#d7e6da] bg-[linear-gradient(180deg,#fffdf6_0%,#eef8f1_100%)] p-5 sm:p-6">
-        <div className="mb-6 flex flex-wrap items-start justify-between gap-4 border-b border-[#d9e7db] pb-5">
+      <div className="rounded-[30px] border border-[color:var(--theme-border-soft)] bg-[image:var(--card-gradient)] p-5 sm:p-6">
+        <div className="mb-6 flex flex-wrap items-start justify-between gap-4 border-b border-[color:var(--theme-border-soft)] pb-5">
           <div>
-            <p className="text-xs uppercase tracking-[0.28em] text-[#86a094]">{t.eyebrow}</p>
-            <h3 className="mt-2 text-2xl font-semibold text-[#173b30] sm:text-[1.75rem]">{t.title}</h3>
-            <p className="mt-3 max-w-3xl text-sm leading-7 text-[#5d786b]">{t.description}</p>
+            <p className="text-xs uppercase tracking-[0.28em] text-[color:var(--foreground-muted)]">{t.eyebrow}</p>
+            <h3 className="mt-2 text-2xl font-semibold text-[color:var(--foreground)] sm:text-[1.75rem]">{t.title}</h3>
+            <p className="mt-3 max-w-3xl text-sm leading-7 text-[color:var(--foreground-soft)]">{t.description}</p>
           </div>
           <Badge className="border-accent/20 bg-accentSoft text-accent">{t.badge}</Badge>
         </div>
 
         <div className="grid gap-5 xl:grid-cols-[1.2fr_0.8fr]">
-          <div className="rounded-[26px] border border-[#d7e6da] bg-[rgba(255,252,243,0.88)] p-4 sm:p-5">
+          <div className="rounded-[26px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] p-4 sm:p-5">
             <div className="grid gap-4 lg:grid-cols-4">
               {t.layers.map((layer, index) => (
                 <div key={layer.title} className="relative">
                   {index < t.layers.length - 1 ? (
                     <div className="absolute right-[-14px] top-1/2 hidden h-0.5 w-7 -translate-y-1/2 bg-gradient-to-r from-accent via-[#7aa7ff] to-[#ffb37a] lg:block" />
                   ) : null}
-                  <div className="rounded-[24px] border border-[#d7e6da] bg-[#f8fbf6] p-4">
-                    <p className="text-xs uppercase tracking-[0.2em] text-[#86a094]">{layer.title}</p>
+                  <div className="rounded-[24px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)] p-4">
+                    <p className="text-xs uppercase tracking-[0.2em] text-[color:var(--foreground-muted)]">{layer.title}</p>
                     <div className="mt-4 space-y-3">
                       {layer.points.map((point, pointIndex) => (
                         <div
                           key={point}
-                          className="rounded-2xl border border-[#d7e6da] bg-[rgba(255,252,243,0.88)] px-4 py-3"
+                          className="rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-4 py-3"
                         >
                           <div
                             className={`mb-3 h-2 rounded-full ${
@@ -154,7 +154,7 @@ export function ArchitectureSystemMap({ locale }: { locale: Locale }) {
                             }`}
                             style={{ width: `${56 + ((index + pointIndex) % 3) * 14}px` }}
                           />
-                          <p className="text-sm text-[#4e685d]">{point}</p>
+                          <p className="text-sm text-[color:var(--foreground-soft)]">{point}</p>
                         </div>
                       ))}
                     </div>
@@ -167,16 +167,16 @@ export function ArchitectureSystemMap({ locale }: { locale: Locale }) {
               {t.lanes.map((lane) => (
                 <div
                   key={lane.title}
-                  className="rounded-[22px] border border-[#d7e6da] bg-[#f8fbf6] px-4 py-4 sm:px-5"
+                  className="rounded-[22px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)] px-4 py-4 sm:px-5"
                 >
                   <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                     <div className="sm:w-44">
-                      <p className="text-xs uppercase tracking-[0.22em] text-[#86a094]">{lane.title}</p>
+                      <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--foreground-muted)]">{lane.title}</p>
                       <div className={`mt-3 h-2 w-20 rounded-full ${lane.tone}`} />
                     </div>
                     <div className="flex-1">
                       <div className="h-0.5 w-full bg-gradient-to-r from-[#dbe9de] via-[#b9d5c2] to-[#dbe9de]" />
-                      <p className="mt-3 text-sm leading-7 text-[#4e685d]">{lane.description}</p>
+                      <p className="mt-3 text-sm leading-7 text-[color:var(--foreground-soft)]">{lane.description}</p>
                     </div>
                   </div>
                 </div>
@@ -185,16 +185,16 @@ export function ArchitectureSystemMap({ locale }: { locale: Locale }) {
           </div>
 
           <div className="grid gap-4">
-            <div className="rounded-[26px] border border-[#d7e6da] bg-[rgba(248,251,246,0.92)] p-4 sm:p-5">
-              <p className="text-xs uppercase tracking-[0.22em] text-[#86a094]">{t.surfacesTitle}</p>
+            <div className="rounded-[26px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)] p-4 sm:p-5">
+              <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--foreground-muted)]">{t.surfacesTitle}</p>
               <div className="mt-4 space-y-3">
                 {t.surfaces.map((surface) => (
-                  <div key={surface.title} className="rounded-2xl border border-[#d7e6da] bg-[#f8fbf6] p-4">
+                  <div key={surface.title} className="rounded-2xl border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] p-4">
                     <div className="flex items-center justify-between gap-3">
-                      <p className="text-sm font-semibold text-[#173b30]">{surface.title}</p>
+                      <p className="text-sm font-semibold text-[color:var(--foreground)]">{surface.title}</p>
                       <span className="h-2.5 w-2.5 rounded-full bg-accent" />
                     </div>
-                    <p className="mt-2 text-sm leading-6 text-[#638074]">{surface.description}</p>
+                    <p className="mt-2 text-sm leading-6 text-[color:var(--foreground-soft)]">{surface.description}</p>
                   </div>
                 ))}
               </div>
@@ -202,10 +202,10 @@ export function ArchitectureSystemMap({ locale }: { locale: Locale }) {
 
             <div className="grid gap-4 md:grid-cols-2">
               {t.outcomes.map((item) => (
-                <div key={item.label} className="rounded-[24px] border border-[#d7e6da] bg-[rgba(255,252,243,0.9)] p-5">
-                  <p className="text-xs uppercase tracking-[0.22em] text-[#86a094]">{item.label}</p>
+                <div key={item.label} className="rounded-[24px] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] p-5">
+                  <p className="text-xs uppercase tracking-[0.22em] text-[color:var(--foreground-muted)]">{item.label}</p>
                   <div className={`mt-4 h-2 w-20 rounded-full ${item.tone}`} />
-                  <p className="mt-4 text-3xl font-semibold text-[#173b30]">{item.value}</p>
+                  <p className="mt-4 text-3xl font-semibold text-[color:var(--foreground)]">{item.value}</p>
                 </div>
               ))}
             </div>

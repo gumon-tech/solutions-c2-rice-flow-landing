@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 import type { Locale } from "@/lib/i18n";
 import type { SiteDictionary } from "@/lib/site-copy";
 import { cn } from "@/lib/utils";
@@ -100,6 +101,7 @@ export function SiteHeaderClient({
           </nav>
 
           <div className="hidden items-center gap-3 lg:flex">
+            <ThemeToggle locale={locale} />
             <div className="relative" ref={localeMenuRef}>
               <button
                 type="button"
@@ -208,6 +210,7 @@ export function SiteHeaderClient({
           )}
         >
           <div className="max-h-[70vh] overflow-y-auto rounded-3xl border border-[#d8e7db] bg-[rgba(250,247,236,0.96)] p-4 shadow-panel">
+            <ThemeToggle locale={locale} className="mb-4 flex w-full justify-center" />
             <div className="mb-4 rounded-2xl border border-[#d8e7db] bg-[rgba(255,252,243,0.92)] p-2">
               <div className="grid grid-cols-2 gap-2">
                 {Object.entries(localeLabels).map(([targetLocale, label]) => {
