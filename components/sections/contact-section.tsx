@@ -16,20 +16,20 @@ export function ContactSection({
       <Container>
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <SurfaceCard className="p-6 sm:p-8">
-            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-500">{copy.sections.contact.eyebrow}</p>
-            <h2 className="mt-4 text-[2rem] font-semibold tracking-tight text-white sm:text-3xl">
+            <p className="text-sm font-semibold uppercase tracking-[0.22em] text-[#86a094]">{copy.sections.contact.eyebrow}</p>
+            <h2 className="mt-4 text-[2rem] font-semibold tracking-tight text-[#173b30] sm:text-3xl">
               {copy.sections.contact.title}
             </h2>
-            <p className="mt-4 text-[0.98rem] leading-7 text-slate-300 sm:text-sm">{copy.sections.contact.description}</p>
+            <p className="mt-4 text-[0.98rem] leading-7 text-[#5d786b] sm:text-sm">{copy.sections.contact.description}</p>
 
             <div className="mt-8 space-y-5">
               <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{copy.sections.contact.emailLabel}</p>
-                <p className="mt-2 break-all text-sm text-slate-200">{copy.footer.contactEmail}</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#86a094]">{copy.sections.contact.emailLabel}</p>
+                <p className="mt-2 break-all text-sm text-[#35584c]">{copy.footer.contactEmail}</p>
               </div>
               <div>
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-500">{copy.sections.contact.discussionLabel}</p>
-                <p className="mt-2 text-sm text-slate-200">{copy.sections.contact.discussionValue}</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-[#86a094]">{copy.sections.contact.discussionLabel}</p>
+                <p className="mt-2 text-sm text-[#35584c]">{copy.sections.contact.discussionValue}</p>
               </div>
             </div>
           </SurfaceCard>

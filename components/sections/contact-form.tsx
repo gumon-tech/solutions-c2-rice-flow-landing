@@ -18,7 +18,7 @@ function SubmitButton({
     <button
       type="submit"
       disabled={pending}
-      className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-accent bg-accent px-5 py-3 text-sm font-semibold tracking-wide text-slate-950 transition hover:-translate-y-0.5 hover:bg-[#67e4d3] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 sm:w-auto"
+      className="inline-flex min-h-12 w-full items-center justify-center rounded-full border border-[#159763] bg-[linear-gradient(135deg,#1db777_0%,#159763_100%)] px-5 py-3 text-sm font-semibold tracking-wide text-[#f8f7ef] transition hover:-translate-y-0.5 hover:bg-[#12925d] disabled:cursor-not-allowed disabled:opacity-70 disabled:hover:translate-y-0 sm:w-auto"
     >
       {pending ? pendingLabel : idleLabel}
     </button>
@@ -54,12 +54,12 @@ function Field({
 }: FieldProps) {
   const error = errors?.[name];
   const baseClassName = cn(
-    "rounded-2xl border bg-white/[0.04] px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-accent/60",
-    error ? "border-rose-400/60" : "border-white/10",
+    "rounded-2xl border bg-[rgba(255,252,243,0.88)] px-4 py-3 text-[#173b30] outline-none transition placeholder:text-[#93a69d] focus:border-accent/60",
+    error ? "border-rose-400/60" : "border-[#d7e6da]",
   );
 
   return (
-    <label className="grid gap-2 text-sm text-slate-300">
+    <label className="grid gap-2 text-sm text-[#567267]">
       {label}
       {as === "textarea" ? (
         <textarea
@@ -78,11 +78,11 @@ function Field({
           aria-invalid={Boolean(error)}
           aria-describedby={error ? `${name}-error` : undefined}
         >
-          <option value="" className="bg-slate-950">
+          <option value="" className="bg-[#fffdf6]">
             {placeholder}
           </option>
           {options.map((option) => (
-            <option key={option} value={option} className="bg-slate-950">
+            <option key={option} value={option} className="bg-[#fffdf6]">
               {option}
             </option>
           ))}
