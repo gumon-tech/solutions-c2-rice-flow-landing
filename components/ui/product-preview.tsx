@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { SurfaceCard } from "@/components/ui/surface-card";
+import { ThemedDashboardImage } from "@/components/ui/themed-dashboard-image";
 import type { Locale } from "@/lib/i18n";
 import type { SiteDictionary } from "@/lib/site-copy";
 
@@ -75,14 +75,7 @@ export function ProductPreview({
           <div className="order-1 xl:order-2">
             <div className="rounded-[2rem] border border-[color:var(--theme-border-soft)] bg-[image:var(--card-gradient)] p-3 shadow-[0_20px_50px_var(--theme-shadow-soft)] sm:p-4">
               <div className="overflow-hidden rounded-[1.4rem] border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-3)]">
-                <Image
-                  src="/images/rice-flow-dashboard-placeholder.svg"
-                  alt={copy.alt}
-                  width={960}
-                  height={720}
-                  className="h-auto w-full object-cover"
-                  priority={locale === "en"}
-                />
+                <ThemedDashboardImage alt={copy.alt} priority={locale === "en"} />
               </div>
             </div>
           </div>
