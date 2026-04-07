@@ -82,13 +82,13 @@ export function ExternalAccessPanel({
     <div className={cn("w-full", className)}>
       <div
         className={cn(
-          "relative w-full overflow-hidden border border-[rgba(23,104,69,0.1)] bg-[linear-gradient(180deg,rgba(255,252,243,0.98)_0%,rgba(244,249,242,0.96)_100%)] shadow-[0_18px_42px_rgba(23,104,69,0.08)]",
+          "relative w-full overflow-hidden border border-[color:var(--theme-border-soft)] bg-[image:var(--card-gradient-soft)] shadow-panel",
           isCompact
             ? "rounded-[28px] p-5 lg:p-6"
             : "rounded-[34px] p-6 lg:p-7 xl:p-8 2xl:px-10 2xl:py-9",
         )}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(241,214,109,0.2),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(24,165,111,0.14),transparent_32%)]" />
+        <div className="absolute inset-0 bg-[image:var(--overlay-radial-soft)]" />
         <div
           className={cn(
             "relative grid gap-6",
@@ -97,7 +97,7 @@ export function ExternalAccessPanel({
           )}
         >
           <div>
-            <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(23,104,69,0.12)] bg-[rgba(255,255,255,0.76)] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--foreground-soft)]">
+            <div className="inline-flex items-center gap-2 rounded-full border border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--foreground-soft)] shadow-[0_10px_22px_var(--theme-shadow-soft)]">
               <span>Mobile Access</span>
             </div>
             <div
@@ -138,9 +138,9 @@ export function ExternalAccessPanel({
               target="_blank"
               rel="noopener noreferrer"
               variant="secondary"
-              className="group min-h-[96px] w-full justify-start gap-4 rounded-[26px] border-[rgba(23,104,69,0.12)] bg-[linear-gradient(135deg,rgba(255,255,255,0.94)_0%,rgba(238,248,241,0.98)_100%)] px-5 py-5 text-left text-[color:var(--foreground)] shadow-[0_14px_32px_rgba(23,104,69,0.08)] hover:bg-white md:col-span-2"
+              className="group min-h-[96px] w-full justify-start gap-4 rounded-[26px] border-[color:var(--theme-border-strong)] bg-[image:var(--card-gradient)] px-5 py-5 text-left text-[color:var(--foreground)] shadow-[0_18px_38px_var(--theme-shadow-soft)] hover:border-[color:var(--theme-border-strong)] hover:bg-[color:var(--theme-surface-2)] md:col-span-2"
             >
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[color:var(--accent)] text-[color:var(--accent-foreground)] shadow-[0_10px_24px_rgba(24,165,111,0.2)]">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[color:var(--accent)] text-[color:var(--accent-foreground)] shadow-[0_10px_24px_var(--theme-shadow-accent)]">
                 <AdminGlyph />
               </span>
               <span className="flex min-w-0 flex-1 flex-col items-start">
@@ -163,9 +163,9 @@ export function ExternalAccessPanel({
               target="_blank"
               rel="noopener noreferrer"
               variant="secondary"
-              className="group min-h-[88px] w-full justify-start gap-4 rounded-[24px] border-[rgba(23,104,69,0.1)] bg-[rgba(255,255,255,0.88)] px-4 py-4 text-left text-[color:var(--foreground)] shadow-[0_12px_28px_rgba(23,104,69,0.06)] hover:bg-white"
+              className="group min-h-[88px] w-full justify-start gap-4 rounded-[24px] border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-4 py-4 text-left text-[color:var(--foreground)] shadow-[0_14px_30px_var(--theme-shadow-soft)] hover:border-[color:var(--theme-border-strong)] hover:bg-[color:var(--theme-surface-2)]"
             >
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#121212] text-white shadow-[0_10px_22px_rgba(18,18,18,0.18)]">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-[linear-gradient(135deg,#1a2639_0%,#0b111b_100%)] text-[#f6f7fb] shadow-[0_10px_22px_var(--theme-shadow-soft)]">
                 <AppleGlyph />
               </span>
               <span className="flex min-w-0 flex-1 flex-col items-start">
@@ -185,9 +185,9 @@ export function ExternalAccessPanel({
               target="_blank"
               rel="noopener noreferrer"
               variant="secondary"
-              className="group min-h-[88px] w-full justify-start gap-4 rounded-[24px] border-[rgba(23,104,69,0.1)] bg-[rgba(255,255,255,0.88)] px-4 py-4 text-left text-[color:var(--foreground)] shadow-[0_12px_28px_rgba(23,104,69,0.06)] hover:bg-white"
+              className="group min-h-[88px] w-full justify-start gap-4 rounded-[24px] border-[color:var(--theme-border-soft)] bg-[color:var(--theme-surface-1)] px-4 py-4 text-left text-[color:var(--foreground)] shadow-[0_14px_30px_var(--theme-shadow-soft)] hover:border-[color:var(--theme-border-strong)] hover:bg-[color:var(--theme-surface-2)]"
             >
-              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[linear-gradient(135deg,#ffffff_0%,#eef8f1_100%)] text-[color:var(--accent)] shadow-[0_10px_22px_rgba(23,104,69,0.14)]">
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-[color:var(--theme-border-soft)] bg-[linear-gradient(135deg,color-mix(in_srgb,var(--accent)_12%,var(--theme-surface-2))_0%,var(--theme-surface-3)_100%)] text-[color:var(--accent)] shadow-[0_10px_22px_var(--theme-shadow-soft)]">
                 <PlayGlyph />
               </span>
               <span className="flex min-w-0 flex-1 flex-col items-start">
