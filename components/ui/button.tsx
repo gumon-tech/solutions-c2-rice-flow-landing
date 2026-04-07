@@ -7,6 +7,8 @@ interface ButtonProps {
   children: ReactNode;
   variant?: "primary" | "secondary";
   className?: string;
+  target?: string;
+  rel?: string;
 }
 
 export function Button({
@@ -14,10 +16,14 @@ export function Button({
   children,
   variant = "primary",
   className,
+  target,
+  rel,
 }: ButtonProps) {
   return (
     <Link
       href={href}
+      target={target}
+      rel={rel}
       className={cn(
         "inline-flex items-center justify-center rounded-full border px-5 py-3.5 text-sm font-semibold tracking-wide transition duration-200",
         variant === "primary"
