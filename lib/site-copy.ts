@@ -120,10 +120,22 @@ export interface SiteDictionary {
       title: string;
       description: string;
     };
-    solution: IntroContent & { metadataTitle: string; metadataDescription: string };
-    features: IntroContent & { metadataTitle: string; metadataDescription: string };
-    architecture: IntroContent & { metadataTitle: string; metadataDescription: string };
-    contact: IntroContent & { metadataTitle: string; metadataDescription: string };
+    solution: IntroContent & {
+      metadataTitle: string;
+      metadataDescription: string;
+    };
+    features: IntroContent & {
+      metadataTitle: string;
+      metadataDescription: string;
+    };
+    architecture: IntroContent & {
+      metadataTitle: string;
+      metadataDescription: string;
+    };
+    contact: IntroContent & {
+      metadataTitle: string;
+      metadataDescription: string;
+    };
   };
   form: ContactFormCopy;
   messages: {
@@ -159,7 +171,8 @@ export interface SiteDictionary {
 
 const en: SiteDictionary = {
   metadata: {
-    siteTitle: "Rice Flow | Measure Right. Control Smart. Scale with Confidence.",
+    siteTitle:
+      "Rice Flow | Measure Right. Control Smart. Scale with Confidence.",
     siteDescription:
       "Rice Flow is a secure digital operations platform for rice mills, combining IoT signals, alert-driven workflows, traceable operations, and scalable multi-site management.",
     keywords: [
@@ -192,6 +205,7 @@ const en: SiteDictionary = {
     { label: "Solution Overview", href: "/solution" },
     { label: "Core Capabilities", href: "/features" },
     { label: "Architecture", href: "/architecture" },
+    { label: "Privacy Policy", href: "/policy" },
     { label: "Request Demo", href: "/contact" },
   ],
   header: {
@@ -201,7 +215,8 @@ const en: SiteDictionary = {
   },
   hero: {
     kicker: "Built for modern rice mill operations",
-    title: "Measure moisture with confidence.\nRespond faster across every rice mill site.",
+    title:
+      "Measure moisture with confidence.\nRespond faster across every rice mill site.",
     summary:
       "Rice Flow helps rice mill teams turn field signals into operational clarity, faster response, and stronger cross-site control through one connected system for monitoring, alerts, and oversight.",
     outcomes: [
@@ -212,22 +227,26 @@ const en: SiteDictionary = {
     primaryCta: "See Live Demo",
     secondaryCta: "Explore Platform",
     secondaryCtaHref: "/solution",
-    ctaHint: "See how Rice Flow turns live field signals into alerts, ownership, and multi-site visibility in one guided walkthrough.",
+    ctaHint:
+      "See how Rice Flow turns live field signals into alerts, ownership, and multi-site visibility in one guided walkthrough.",
     keyPoints: [
       {
         icon: "signal",
         title: "Real-time monitoring",
-        description: "Track moisture, alerts, and signal health without waiting for manual reports.",
+        description:
+          "Track moisture, alerts, and signal health without waiting for manual reports.",
       },
       {
         icon: "response",
         title: "Faster incident response",
-        description: "Route abnormal conditions to the right operator before downtime spreads.",
+        description:
+          "Route abnormal conditions to the right operator before downtime spreads.",
       },
       {
         icon: "organization",
         title: "Multi-site visibility",
-        description: "See line-level issues and mill-wide status in one enterprise-ready view.",
+        description:
+          "See line-level issues and mill-wide status in one enterprise-ready view.",
       },
     ],
   },
@@ -238,15 +257,18 @@ const en: SiteDictionary = {
     annotations: [
       {
         title: "Real-time monitoring",
-        description: "See moisture, signal quality, and shift patterns in one operational view.",
+        description:
+          "See moisture, signal quality, and shift patterns in one operational view.",
       },
       {
         title: "Anomaly detection",
-        description: "Surface abnormal dryer and site conditions fast, with clear response ownership.",
+        description:
+          "Surface abnormal dryer and site conditions fast, with clear response ownership.",
       },
       {
         title: "Multi-site visibility",
-        description: "Compare sites, alerts, and readiness without switching between tools.",
+        description:
+          "Compare sites, alerts, and readiness without switching between tools.",
       },
     ],
     stats: [
@@ -277,7 +299,8 @@ const en: SiteDictionary = {
     },
     value: {
       eyebrow: "Value proposition",
-      title: "A platform that improves visibility, control, and operational readiness",
+      title:
+        "A platform that improves visibility, control, and operational readiness",
       description:
         "Rice Flow treats field signals as the starting point for a stronger operating model. Teams gain better visibility, faster response paths, stronger governance, and a foundation built to scale.",
     },
@@ -301,13 +324,15 @@ const en: SiteDictionary = {
     },
     why: {
       eyebrow: "Why Rice Flow",
-      title: "Positioned as an operational platform, not just a monitoring tool",
+      title:
+        "Positioned as an operational platform, not just a monitoring tool",
       description:
         "Rice Flow is built to become trusted digital infrastructure for rice mill operations, with the depth to support field execution, enterprise control, and long-term growth.",
     },
     solutionOverview: {
       eyebrow: "Solution framing",
-      title: "Built to improve how rice mills operate, not only what they measure",
+      title:
+        "Built to improve how rice mills operate, not only what they measure",
       description:
         "Moisture control is where the business impact becomes visible first. But Rice Flow is designed to improve visibility, response, governance, and scale across the wider operating model.",
     },
@@ -319,7 +344,8 @@ const en: SiteDictionary = {
     },
     architectureOutcomes: {
       eyebrow: "Architecture outcomes",
-      title: "Designed to support both field reality and management accountability",
+      title:
+        "Designed to support both field reality and management accountability",
       description:
         "The architecture is not only about technical separation. It is designed to preserve data continuity, support controlled action, and keep the platform adaptable as operations mature.",
     },
@@ -359,40 +385,47 @@ const en: SiteDictionary = {
       metadataDescription:
         "Explore how Rice Flow extends moisture monitoring into a broader platform for visibility, control, and scalable rice mill operations.",
       eyebrow: "Solution",
-      title: "A digital operations layer for rice mills that need clarity, control, and room to grow",
+      title:
+        "A digital operations layer for rice mills that need clarity, control, and room to grow",
       description:
         "Rice Flow begins with accurate moisture-related decision support, then extends that value by connecting telemetry, alerting, workflows, maintenance, and governance into one scalable platform.",
       primaryCta: { label: "Request Demo", href: "/contact" },
       secondaryCta: { label: "View Architecture", href: "/architecture" },
     },
     features: {
-      metadataTitle: "Rice Flow Features | Capabilities for Field and Management Operations",
+      metadataTitle:
+        "Rice Flow Features | Capabilities for Field and Management Operations",
       metadataDescription:
         "Explore Rice Flow capabilities for moisture monitoring, alerting, incident response, maintenance, reporting, and multi-organization control.",
       eyebrow: "Features",
-      title: "Capabilities designed around operational action, not passive dashboards",
+      title:
+        "Capabilities designed around operational action, not passive dashboards",
       description:
         "The platform is designed to help rice mill teams see what matters, respond with accountability, and manage growth across sites, devices, and organizations.",
       primaryCta: { label: "Talk to Sales", href: "/contact" },
       secondaryCta: { label: "Back to Home", href: "/" },
     },
     architecture: {
-      metadataTitle: "Rice Flow Architecture | Secure, Offline-first, Scalable Platform Design",
+      metadataTitle:
+        "Rice Flow Architecture | Secure, Offline-first, Scalable Platform Design",
       metadataDescription:
         "Understand Rice Flow architecture across field devices, secure ingestion, platform services, and web, mobile, and dashboard experiences.",
       eyebrow: "Architecture",
-      title: "Layered for field resilience, secure governance, and enterprise expansion",
+      title:
+        "Layered for field resilience, secure governance, and enterprise expansion",
       description:
         "Rice Flow bridges field operations and centralized oversight. Its architecture is designed for continuity under real site constraints while supporting auditability, policy control, and future commercial models.",
       primaryCta: { label: "Request Architecture Review", href: "/contact" },
       secondaryCta: { label: "Explore Features", href: "/features" },
     },
     contact: {
-      metadataTitle: "Contact Rice Flow | Request Demo and Enterprise Consultation",
+      metadataTitle:
+        "Contact Rice Flow | Request Demo and Enterprise Consultation",
       metadataDescription:
         "Contact the Rice Flow team to request a demo, discuss solution fit, review architecture, or plan the next rollout step.",
       eyebrow: "Contact",
-      title: "Bring your operational challenges into a structured solution discussion",
+      title:
+        "Bring your operational challenges into a structured solution discussion",
       description:
         "Start a conversation about your sites, operational pain points, and how a secure digital platform can support measurable improvement.",
       primaryCta: { label: "Back to Home", href: "/" },
@@ -411,7 +444,8 @@ const en: SiteDictionary = {
       fullName: "Your name",
       workEmail: "name@company.com",
       company: "Organization or site group",
-      goals: "Describe current operational pain points, sites, teams, or goals.",
+      goals:
+        "Describe current operational pain points, sites, teams, or goals.",
     },
     interestOptions: [
       "Operational visibility",
@@ -608,17 +642,20 @@ const en: SiteDictionary = {
   principleCards: [
     {
       title: "Offline-first",
-      description: "Designed for continuity even when field connectivity is unstable or intermittent.",
+      description:
+        "Designed for continuity even when field connectivity is unstable or intermittent.",
       icon: "offline",
     },
     {
       title: "Security-first",
-      description: "Protect identity, access, data flow, and operational integrity from the start.",
+      description:
+        "Protect identity, access, data flow, and operational integrity from the start.",
       icon: "security",
     },
     {
       title: "Human-in-the-loop Control",
-      description: "Keep critical decisions accountable with structured oversight and guided action.",
+      description:
+        "Keep critical decisions accountable with structured oversight and guided action.",
       icon: "control",
     },
     {
@@ -635,12 +672,14 @@ const en: SiteDictionary = {
     },
     {
       title: "Event-driven & Alert-driven",
-      description: "Structure the platform around important events so teams know what needs attention now.",
+      description:
+        "Structure the platform around important events so teams know what needs attention now.",
       icon: "alert",
     },
     {
       title: "Configurable & Scalable",
-      description: "Support different policies, sites, and growth paths without rebuilding the core product.",
+      description:
+        "Support different policies, sites, and growth paths without rebuilding the core product.",
       icon: "growth",
     },
     {
@@ -813,6 +852,7 @@ const th: SiteDictionary = {
     { label: "ภาพรวมโซลูชัน", href: "/solution" },
     { label: "ความสามารถหลัก", href: "/features" },
     { label: "สถาปัตยกรรม", href: "/architecture" },
+    { label: "นโยบายความเป็นส่วนตัว", href: "/policy" },
     { label: "ขอนัด Demo", href: "/contact" },
   ],
   header: {
@@ -833,22 +873,26 @@ const th: SiteDictionary = {
     primaryCta: "ดู Demo แบบ Live",
     secondaryCta: "สำรวจแพลตฟอร์ม",
     secondaryCtaHref: "/solution",
-    ctaHint: "ดูการทำงานจริงของการแจ้งเตือนแบบสด การมอบหมายผู้รับผิดชอบ และการมองเห็นหลายไซต์ใน walkthrough เดียว",
+    ctaHint:
+      "ดูการทำงานจริงของการแจ้งเตือนแบบสด การมอบหมายผู้รับผิดชอบ และการมองเห็นหลายไซต์ใน walkthrough เดียว",
     keyPoints: [
       {
         icon: "signal",
         title: "ติดตามสถานะแบบเรียลไทม์",
-        description: "ติดตามความชื้น การแจ้งเตือน และคุณภาพสัญญาณได้โดยไม่ต้องรอรายงานจากหน้างาน",
+        description:
+          "ติดตามความชื้น การแจ้งเตือน และคุณภาพสัญญาณได้โดยไม่ต้องรอรายงานจากหน้างาน",
       },
       {
         icon: "response",
         title: "ตอบสนองเหตุการณ์ได้เร็วขึ้น",
-        description: "ส่งต่อเหตุผิดปกติให้คนที่ใช่ได้ทันที ก่อนลุกลามเป็น downtime ที่กระทบการผลิต",
+        description:
+          "ส่งต่อเหตุผิดปกติให้คนที่ใช่ได้ทันที ก่อนลุกลามเป็น downtime ที่กระทบการผลิต",
       },
       {
         icon: "organization",
         title: "มองเห็นหลายไซต์ในภาพเดียว",
-        description: "เห็นปัญหาระดับไลน์ผลิตและภาพรวมหลายโรงสีในมุมมองเดียวที่พร้อมใช้จริงระดับองค์กร",
+        description:
+          "เห็นปัญหาระดับไลน์ผลิตและภาพรวมหลายโรงสีในมุมมองเดียวที่พร้อมใช้จริงระดับองค์กร",
       },
     ],
   },
@@ -859,15 +903,18 @@ const th: SiteDictionary = {
     annotations: [
       {
         title: "ติดตามสถานะแบบเรียลไทม์",
-        description: "เห็นความชื้น คุณภาพสัญญาณ และแนวโน้มการทำงานจากมุมมองเดียวแบบสด",
+        description:
+          "เห็นความชื้น คุณภาพสัญญาณ และแนวโน้มการทำงานจากมุมมองเดียวแบบสด",
       },
       {
         title: "ตรวจจับความผิดปกติ",
-        description: "ดันเหตุผิดปกติของ Dryer และแต่ละไซต์ขึ้นมาให้ทีมตอบสนองได้ทันที",
+        description:
+          "ดันเหตุผิดปกติของ Dryer และแต่ละไซต์ขึ้นมาให้ทีมตอบสนองได้ทันที",
       },
       {
         title: "มองเห็นหลายไซต์ในภาพเดียว",
-        description: "เปรียบเทียบสถานะหลายไซต์ การแจ้งเตือน และความพร้อมของระบบได้โดยไม่ต้องสลับเครื่องมือ",
+        description:
+          "เปรียบเทียบสถานะหลายไซต์ การแจ้งเตือน และความพร้อมของระบบได้โดยไม่ต้องสลับเครื่องมือ",
       },
     ],
     stats: [
@@ -922,13 +969,15 @@ const th: SiteDictionary = {
     },
     why: {
       eyebrow: "Why Rice Flow",
-      title: "ถูกวางตำแหน่งเป็นแพลตฟอร์มปฏิบัติการ ไม่ใช่แค่เครื่องมือเฝ้าดูสถานะ",
+      title:
+        "ถูกวางตำแหน่งเป็นแพลตฟอร์มปฏิบัติการ ไม่ใช่แค่เครื่องมือเฝ้าดูสถานะ",
       description:
         "Rice Flow ถูกออกแบบให้เป็นโครงสร้างพื้นฐานดิจิทัลที่องค์กรเชื่อถือได้ ทั้งในมิติการใช้งานจริง การกำกับดูแล และการเติบโตเชิงธุรกิจ",
     },
     solutionOverview: {
       eyebrow: "กรอบของโซลูชัน",
-      title: "ออกแบบมาเพื่อยกระดับการดำเนินงานของโรงสี ไม่ใช่แค่วัดค่าได้มากขึ้น",
+      title:
+        "ออกแบบมาเพื่อยกระดับการดำเนินงานของโรงสี ไม่ใช่แค่วัดค่าได้มากขึ้น",
       description:
         "เรื่องความชื้นคือจุดเริ่มต้นที่เห็นผลกระทบทางธุรกิจชัดเจน แต่ตัวแพลตฟอร์มถูกออกแบบมาเพื่อยกระดับการมองเห็นสถานะ การตอบสนอง การกำกับดูแล และความสามารถในการเติบโตของทั้งระบบ",
     },
@@ -980,29 +1029,34 @@ const th: SiteDictionary = {
       metadataDescription:
         "สำรวจว่า Rice Flow เปลี่ยนการติดตามความชื้นให้กลายเป็นแพลตฟอร์มสำหรับการมองเห็นสถานะ การควบคุม และการบริหารจัดการโรงสีที่ขยายได้อย่างไร",
       eyebrow: "โซลูชัน",
-      title: "เลเยอร์ดิจิทัลสำหรับโรงสีข้าวที่ต้องการความชัดเจน การควบคุม และการเติบโตอย่างเป็นระบบ",
+      title:
+        "เลเยอร์ดิจิทัลสำหรับโรงสีข้าวที่ต้องการความชัดเจน การควบคุม และการเติบโตอย่างเป็นระบบ",
       description:
         "Rice Flow เริ่มจากการช่วยตัดสินใจเรื่องความชื้นอย่างแม่นยำ แต่คุณค่าที่แท้จริงอยู่ที่การเชื่อมข้อมูลจากหน้างาน การแจ้งเตือน ขั้นตอนการทำงาน งานบำรุงรักษา และการกำกับดูแลไว้ในระบบเดียว",
       primaryCta: { label: "ขอนัด Demo", href: "/contact" },
       secondaryCta: { label: "ดูสถาปัตยกรรม", href: "/architecture" },
     },
     features: {
-      metadataTitle: "Rice Flow Features | ความสามารถสำหรับงานภาคสนามและการบริหารจัดการ",
+      metadataTitle:
+        "Rice Flow Features | ความสามารถสำหรับงานภาคสนามและการบริหารจัดการ",
       metadataDescription:
         "ดูความสามารถของ Rice Flow สำหรับการติดตามความชื้น การแจ้งเตือน การตอบสนองต่อเหตุการณ์ งานบำรุงรักษา รายงาน และการกำกับดูแลหลายองค์กร",
       eyebrow: "ความสามารถ",
-      title: "ความสามารถที่ออกแบบจาก action จริง ไม่ใช่แดชบอร์ดที่เอาไว้ดูอย่างเดียว",
+      title:
+        "ความสามารถที่ออกแบบจาก action จริง ไม่ใช่แดชบอร์ดที่เอาไว้ดูอย่างเดียว",
       description:
         "ชุดความสามารถของแพลตฟอร์มถูกออกแบบเพื่อช่วยให้ทีมงานเห็นสิ่งสำคัญ ตอบสนองอย่างมีความรับผิดชอบ และควบคุมการเติบโตของระบบข้ามไซต์และข้ามองค์กร",
       primaryCta: { label: "คุยกับทีมขาย", href: "/contact" },
       secondaryCta: { label: "กลับหน้าแรก", href: "/" },
     },
     architecture: {
-      metadataTitle: "Rice Flow Architecture | ออกแบบให้ปลอดภัย รองรับ Offline-first และขยายได้",
+      metadataTitle:
+        "Rice Flow Architecture | ออกแบบให้ปลอดภัย รองรับ Offline-first และขยายได้",
       metadataDescription:
         "ทำความเข้าใจสถาปัตยกรรมของ Rice Flow ตั้งแต่อุปกรณ์ภาคสนาม การรับข้อมูลอย่างปลอดภัย บริการแกนกลาง ไปจนถึง web, mobile และ dashboard",
       eyebrow: "สถาปัตยกรรม",
-      title: "ออกแบบเป็นชั้นเพื่อรองรับหน้างานจริง ความปลอดภัย และการเติบโตระดับองค์กร",
+      title:
+        "ออกแบบเป็นชั้นเพื่อรองรับหน้างานจริง ความปลอดภัย และการเติบโตระดับองค์กร",
       description:
         "Rice Flow เชื่อมโลกของหน้างานกับการบริหารแบบรวมศูนย์ โดยออกแบบให้คงความต่อเนื่องภายใต้ข้อจำกัดจริง พร้อมรองรับ auditability, policy control และการต่อยอดทางธุรกิจในระยะยาว",
       primaryCta: { label: "ขอคุยเรื่อง Architecture", href: "/contact" },
@@ -1032,7 +1086,8 @@ const th: SiteDictionary = {
       fullName: "ชื่อของคุณ",
       workEmail: "name@company.com",
       company: "ชื่อองค์กรหรือกลุ่มไซต์งาน",
-      goals: "เล่าปัญหาปัจจุบัน ไซต์ที่เกี่ยวข้อง ทีมหรือเป้าหมายที่ต้องการยกระดับ",
+      goals:
+        "เล่าปัญหาปัจจุบัน ไซต์ที่เกี่ยวข้อง ทีมหรือเป้าหมายที่ต้องการยกระดับ",
     },
     interestOptions: [
       "การมองเห็นสถานะการปฏิบัติการ",
@@ -1045,7 +1100,8 @@ const th: SiteDictionary = {
     submitPending: "กำลังส่ง...",
   },
   messages: {
-    contactSuccess: "ขอบคุณสำหรับความสนใจ ทีมงานจะติดต่อกลับเพื่อพูดคุยในขั้นตอนถัดไป",
+    contactSuccess:
+      "ขอบคุณสำหรับความสนใจ ทีมงานจะติดต่อกลับเพื่อพูดคุยในขั้นตอนถัดไป",
     contactErrorSummary: "กรุณาตรวจสอบข้อมูลที่กรอกและลองอีกครั้ง",
     validation: {
       fullName: "กรุณากรอกชื่อ-นามสกุล",
@@ -1105,32 +1161,38 @@ const th: SiteDictionary = {
   valueCards: [
     {
       title: "เห็นภาพต่อเนื่อง",
-      description: "มองเห็นสถานะปัจจุบัน ข้อยกเว้น และข้อมูลย้อนหลังของหลายไซต์ได้จากมุมมองเดียว",
+      description:
+        "มองเห็นสถานะปัจจุบัน ข้อยกเว้น และข้อมูลย้อนหลังของหลายไซต์ได้จากมุมมองเดียว",
       icon: "dashboard",
     },
     {
       title: "ตอบสนองได้เร็วขึ้น",
-      description: "เปลี่ยนจากการรอดูสถานะ มาเป็นการลงมือจาก alert ที่มีเจ้าของและลำดับการตอบสนองชัดเจน",
+      description:
+        "เปลี่ยนจากการรอดูสถานะ มาเป็นการลงมือจาก alert ที่มีเจ้าของและลำดับการตอบสนองชัดเจน",
       icon: "alert",
     },
     {
       title: "ควบคุมได้ดียิ่งขึ้น",
-      description: "ใช้ telemetry, thresholds และ workflow ที่อิงนโยบายจริงเพื่อช่วยการตัดสินใจหน้างาน",
+      description:
+        "ใช้ telemetry, thresholds และ workflow ที่อิงนโยบายจริงเพื่อช่วยการตัดสินใจหน้างาน",
       icon: "control",
     },
     {
       title: "ตรวจสอบย้อนหลังได้",
-      description: "เชื่อมการตัดสินใจ เหตุการณ์ และประวัติกิจกรรมไว้ด้วยกันเพื่อใช้ตรวจสอบและทบทวนได้ง่าย",
+      description:
+        "เชื่อมการตัดสินใจ เหตุการณ์ และประวัติกิจกรรมไว้ด้วยกันเพื่อใช้ตรวจสอบและทบทวนได้ง่าย",
       icon: "trace",
     },
     {
       title: "พร้อมสำหรับงานบำรุงรักษาเชิงป้องกัน",
-      description: "เชื่อมสุขภาพอุปกรณ์ รอบบริการ และหลักฐานเชิงปฏิบัติการเพื่อลด downtime ที่หลีกเลี่ยงได้",
+      description:
+        "เชื่อมสุขภาพอุปกรณ์ รอบบริการ และหลักฐานเชิงปฏิบัติการเพื่อลด downtime ที่หลีกเลี่ยงได้",
       icon: "maintenance",
     },
     {
       title: "พร้อมขยายเป็นแพลตฟอร์ม",
-      description: "รองรับหลายไซต์ หลายองค์กร โมเดล subscription และการเติบโตร่วมกับพันธมิตรบนฐานเดียวกัน",
+      description:
+        "รองรับหลายไซต์ หลายองค์กร โมเดล subscription และการเติบโตร่วมกับพันธมิตรบนฐานเดียวกัน",
       icon: "organization",
     },
   ],
@@ -1172,22 +1234,26 @@ const th: SiteDictionary = {
   capabilityCards: [
     {
       title: "Moisture Monitoring",
-      description: "ติดตามค่าความชื้นอย่างต่อเนื่องพร้อมบริบทของข้อมูลและสถานะที่เกี่ยวข้อง",
+      description:
+        "ติดตามค่าความชื้นอย่างต่อเนื่องพร้อมบริบทของข้อมูลและสถานะที่เกี่ยวข้อง",
       icon: "signal",
     },
     {
       title: "Threshold & Alert Engine",
-      description: "กำหนด threshold, rules และ escalation ให้สอดคล้องกับนโยบายและสภาพการทำงานจริง",
+      description:
+        "กำหนด threshold, rules และ escalation ให้สอดคล้องกับนโยบายและสภาพการทำงานจริง",
       icon: "alert",
     },
     {
       title: "Incident / Response Workflow",
-      description: "บันทึกเหตุการณ์ มอบหมายงาน และติดตามการตอบสนองอย่างเป็นระบบ",
+      description:
+        "บันทึกเหตุการณ์ มอบหมายงาน และติดตามการตอบสนองอย่างเป็นระบบ",
       icon: "response",
     },
     {
       title: "Device & Sensor Visibility",
-      description: "เห็นภาพอุปกรณ์ สถานะ sensor การเชื่อมต่อ และตัวตนอุปกรณ์ได้อย่างเชื่อถือได้",
+      description:
+        "เห็นภาพอุปกรณ์ สถานะ sensor การเชื่อมต่อ และตัวตนอุปกรณ์ได้อย่างเชื่อถือได้",
       icon: "device",
     },
     {
@@ -1197,59 +1263,70 @@ const th: SiteDictionary = {
     },
     {
       title: "Reports & Export",
-      description: "สร้างรายงานและส่งออกข้อมูลสำหรับการทบทวน การกำกับดูแล และการวิเคราะห์ต่อยอด",
+      description:
+        "สร้างรายงานและส่งออกข้อมูลสำหรับการทบทวน การกำกับดูแล และการวิเคราะห์ต่อยอด",
       icon: "analytics",
     },
     {
       title: "Audit Trail",
-      description: "บันทึกการเปลี่ยนแปลง การตัดสินใจ และกิจกรรมสำคัญเพื่อการตรวจสอบย้อนหลัง",
+      description:
+        "บันทึกการเปลี่ยนแปลง การตัดสินใจ และกิจกรรมสำคัญเพื่อการตรวจสอบย้อนหลัง",
       icon: "audit",
     },
     {
       title: "Multi-organization Access Control",
-      description: "รองรับหลายองค์กร หลายไซต์ และหลายทีมด้วยสิทธิ์การเข้าถึงตามบทบาทและลำดับชั้น",
+      description:
+        "รองรับหลายองค์กร หลายไซต์ และหลายทีมด้วยสิทธิ์การเข้าถึงตามบทบาทและลำดับชั้น",
       icon: "organization",
     },
   ],
   principleCards: [
     {
       title: "Offline-first",
-      description: "ออกแบบให้ทำงานต่อได้แม้การเชื่อมต่อจากหน้างานจะไม่เสถียรหรือขาดช่วง",
+      description:
+        "ออกแบบให้ทำงานต่อได้แม้การเชื่อมต่อจากหน้างานจะไม่เสถียรหรือขาดช่วง",
       icon: "offline",
     },
     {
       title: "Security-first",
-      description: "ปกป้องตัวตนผู้ใช้ สิทธิ์การเข้าถึง การไหลของข้อมูล และความถูกต้องของการปฏิบัติการตั้งแต่ต้น",
+      description:
+        "ปกป้องตัวตนผู้ใช้ สิทธิ์การเข้าถึง การไหลของข้อมูล และความถูกต้องของการปฏิบัติการตั้งแต่ต้น",
       icon: "security",
     },
     {
       title: "Human-in-the-loop Control",
-      description: "คงการตัดสินใจสำคัญไว้ภายใต้การกำกับดูแลของคน พร้อมขั้นตอนที่ตรวจสอบได้",
+      description:
+        "คงการตัดสินใจสำคัญไว้ภายใต้การกำกับดูแลของคน พร้อมขั้นตอนที่ตรวจสอบได้",
       icon: "control",
     },
     {
       title: "Mobile-first Operation",
-      description: "ให้ความสำคัญกับความเร็วและความง่ายในการใช้งานจริงที่หน้างาน ไม่ใช่แค่หน้าจอในสำนักงาน",
+      description:
+        "ให้ความสำคัญกับความเร็วและความง่ายในการใช้งานจริงที่หน้างาน ไม่ใช่แค่หน้าจอในสำนักงาน",
       icon: "mobile",
     },
     {
       title: "Data-centric Architecture",
-      description: "เปลี่ยนสัญญาณจากหน้างานให้เป็นข้อมูลที่มีบริบทและพร้อมใช้ในการตัดสินใจต่อเนื่อง",
+      description:
+        "เปลี่ยนสัญญาณจากหน้างานให้เป็นข้อมูลที่มีบริบทและพร้อมใช้ในการตัดสินใจต่อเนื่อง",
       icon: "analytics",
     },
     {
       title: "Event-driven & Alert-driven",
-      description: "จัดโครงสร้างระบบรอบเหตุการณ์สำคัญ เพื่อให้ทีมรู้ว่าต้องสนใจอะไรในเวลาที่เหมาะสม",
+      description:
+        "จัดโครงสร้างระบบรอบเหตุการณ์สำคัญ เพื่อให้ทีมรู้ว่าต้องสนใจอะไรในเวลาที่เหมาะสม",
       icon: "alert",
     },
     {
       title: "Configurable & Scalable",
-      description: "รองรับนโยบาย หน้างาน และรูปแบบการเติบโตที่แตกต่างกันโดยไม่ต้องรื้อแกนระบบ",
+      description:
+        "รองรับนโยบาย หน้างาน และรูปแบบการเติบโตที่แตกต่างกันโดยไม่ต้องรื้อแกนระบบ",
       icon: "growth",
     },
     {
       title: "Future-ready",
-      description: "วางรากฐานสำหรับ platform business, partner operation และการต่อยอดสู่งานอุตสาหกรรมอื่นในอนาคต",
+      description:
+        "วางรากฐานสำหรับ platform business, partner operation และการต่อยอดสู่งานอุตสาหกรรมอื่นในอนาคต",
       icon: "organization",
     },
   ],
@@ -1278,7 +1355,8 @@ const th: SiteDictionary = {
   architectureLayers: [
     {
       title: "Field Device Layer",
-      description: "Sensors และอุปกรณ์ที่เชื่อมต่อกับ edge ทำหน้าที่เก็บค่าการทำงานและสถานะอุปกรณ์จากต้นทาง",
+      description:
+        "Sensors และอุปกรณ์ที่เชื่อมต่อกับ edge ทำหน้าที่เก็บค่าการทำงานและสถานะอุปกรณ์จากต้นทาง",
       points: [
         "ข้อมูลความชื้นและสัญญาณที่เกี่ยวข้องกับเครื่องจักร",
         "ตัวตนอุปกรณ์และร่องรอยการ onboard เข้าใช้งาน",
@@ -1353,23 +1431,28 @@ const th: SiteDictionary = {
   architectureFlowSteps: [
     {
       title: "Capture",
-      description: "อุปกรณ์ภาคสนามสร้างข้อมูลและสัญญาณที่เชื่อมกับบริบทการทำงานจริง",
+      description:
+        "อุปกรณ์ภาคสนามสร้างข้อมูลและสัญญาณที่เชื่อมกับบริบทการทำงานจริง",
     },
     {
       title: "Ingest",
-      description: "ข้อมูลผ่านขอบเขตการรับเข้าอย่างปลอดภัย โดยยังคงความต่อเนื่องของสัญญาณสำคัญ",
+      description:
+        "ข้อมูลผ่านขอบเขตการรับเข้าอย่างปลอดภัย โดยยังคงความต่อเนื่องของสัญญาณสำคัญ",
     },
     {
       title: "Evaluate",
-      description: "ระบบใช้กฎ เกณฑ์ และตรรกะการแจ้งเตือนเพื่อแปลข้อมูลดิบให้กลายเป็นสถานะที่นำไปปฏิบัติการได้",
+      description:
+        "ระบบใช้กฎ เกณฑ์ และตรรกะการแจ้งเตือนเพื่อแปลข้อมูลดิบให้กลายเป็นสถานะที่นำไปปฏิบัติการได้",
     },
     {
       title: "Respond",
-      description: "ทีมงานตรวจสอบเหตุการณ์ ลงมือปฏิบัติ เก็บหลักฐาน และรักษาความรับผิดชอบผ่านขั้นตอนที่ชัดเจน",
+      description:
+        "ทีมงานตรวจสอบเหตุการณ์ ลงมือปฏิบัติ เก็บหลักฐาน และรักษาความรับผิดชอบผ่านขั้นตอนที่ชัดเจน",
     },
     {
       title: "Govern",
-      description: "ข้อมูลย้อนหลัง บันทึกการตรวจสอบ ภาพรวมอุปกรณ์ และรายงาน ช่วยให้การบริหารตรวจสอบย้อนหลังได้อย่างมั่นใจ",
+      description:
+        "ข้อมูลย้อนหลัง บันทึกการตรวจสอบ ภาพรวมอุปกรณ์ และรายงาน ช่วยให้การบริหารตรวจสอบย้อนหลังได้อย่างมั่นใจ",
     },
   ],
 };
