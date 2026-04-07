@@ -79,45 +79,85 @@ export function ExternalAccessPanel({
   const isCompact = variant === "compact";
 
   return (
-    <div
-      className={cn(
-        "grid w-full gap-4 lg:gap-5",
-        isCompact
-          ? "lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]"
-          : "xl:grid-cols-[minmax(0,0.88fr)_minmax(0,1.12fr)]",
-        className,
-      )}
-    >
+    <div className={cn("w-full", className)}>
       <div
         className={cn(
           "relative w-full overflow-hidden border border-[rgba(23,104,69,0.1)] bg-[linear-gradient(180deg,rgba(255,252,243,0.98)_0%,rgba(244,249,242,0.96)_100%)] shadow-[0_18px_42px_rgba(23,104,69,0.08)]",
-          isCompact ? "rounded-[28px] p-5" : "rounded-[34px] p-6 lg:p-7",
+          isCompact
+            ? "rounded-[28px] p-5 lg:p-6"
+            : "rounded-[34px] p-6 lg:p-7 xl:p-8 2xl:px-10 2xl:py-9",
         )}
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(241,214,109,0.2),transparent_28%),radial-gradient(circle_at_bottom_left,rgba(24,165,111,0.14),transparent_32%)]" />
-        <div className="relative">
-          <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(23,104,69,0.12)] bg-[rgba(255,255,255,0.76)] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--foreground-soft)]">
-            <span>Mobile Access</span>
-          </div>
-          <div className="mt-5 max-w-[44rem]">
-            <p
+        <div
+          className={cn(
+            "relative grid gap-6",
+            !isCompact &&
+              "2xl:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] 2xl:items-start 2xl:gap-10",
+          )}
+        >
+          <div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-[rgba(23,104,69,0.12)] bg-[rgba(255,255,255,0.76)] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--foreground-soft)]">
+              <span>Mobile Access</span>
+            </div>
+            <div
               className={cn(
-                "font-display font-semibold tracking-tight text-[color:var(--foreground)]",
-                isCompact ? "text-[1.3rem]" : "text-[1.72rem]",
+                "mt-5",
+                isCompact ? "max-w-[38rem]" : "max-w-[46rem]",
               )}
             >
-              {copy.appsLabel}
-            </p>
-            <p
-              className={cn(
-                "mt-2 leading-7 text-[color:var(--foreground-soft)]",
-                isCompact ? "text-sm" : "text-[0.98rem]",
-              )}
-            >
-              {copy.appsDescription}
-            </p>
+              <p
+                className={cn(
+                  "font-display font-semibold tracking-tight text-[color:var(--foreground)]",
+                  isCompact
+                    ? "text-[1.3rem]"
+                    : "text-[1.72rem] xl:text-[1.92rem]",
+                )}
+              >
+                {copy.appsLabel}
+              </p>
+              <p
+                className={cn(
+                  "mt-2 leading-7 text-[color:var(--foreground-soft)]",
+                  isCompact ? "text-sm" : "text-[0.98rem] xl:text-[1.02rem]",
+                )}
+              >
+                {copy.appsDescription}
+              </p>
+            </div>
           </div>
-          <div className={cn("mt-6 grid gap-3 md:grid-cols-2")}>
+
+          <div
+            className={cn(
+              "grid gap-3 md:grid-cols-2",
+              !isCompact && "2xl:self-end",
+            )}
+          >
+            <Button
+              href={adminUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="secondary"
+              className="group min-h-[96px] w-full justify-start gap-4 rounded-[26px] border-[rgba(23,104,69,0.12)] bg-[linear-gradient(135deg,rgba(255,255,255,0.94)_0%,rgba(238,248,241,0.98)_100%)] px-5 py-5 text-left text-[color:var(--foreground)] shadow-[0_14px_32px_rgba(23,104,69,0.08)] hover:bg-white md:col-span-2"
+            >
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[color:var(--accent)] text-[color:var(--accent-foreground)] shadow-[0_10px_24px_rgba(24,165,111,0.2)]">
+                <AdminGlyph />
+              </span>
+              <span className="flex min-w-0 flex-1 flex-col items-start">
+                <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--foreground-muted)]">
+                  {copy.adminAction}
+                </span>
+                <span className="mt-1 text-sm font-semibold text-[color:var(--foreground)] xl:text-[0.98rem]">
+                  {copy.adminLabel}
+                </span>
+                <span className="mt-1 text-sm leading-6 text-[color:var(--foreground-soft)]">
+                  {copy.adminDescription}
+                </span>
+              </span>
+              <span className="text-[color:var(--foreground-faint)] transition group-hover:translate-x-1">
+                &gt;
+              </span>
+            </Button>
             <Button
               href={appStoreUrl}
               target="_blank"
@@ -132,7 +172,7 @@ export function ExternalAccessPanel({
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--foreground-muted)]">
                   iPhone & iPad
                 </span>
-                <span className="mt-1 text-sm font-semibold text-[color:var(--foreground)]">
+                <span className="mt-1 text-sm font-semibold text-[color:var(--foreground)] xl:text-[0.98rem]">
                   {copy.appStoreLabel}
                 </span>
               </span>
@@ -154,7 +194,7 @@ export function ExternalAccessPanel({
                 <span className="text-xs font-semibold uppercase tracking-[0.18em] text-[color:var(--foreground-muted)]">
                   Android Devices
                 </span>
-                <span className="mt-1 text-sm font-semibold text-[color:var(--foreground)]">
+                <span className="mt-1 text-sm font-semibold text-[color:var(--foreground)] xl:text-[0.98rem]">
                   {copy.playStoreLabel}
                 </span>
               </span>

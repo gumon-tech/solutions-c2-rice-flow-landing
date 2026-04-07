@@ -62,7 +62,7 @@ export function HeroSection({
       <div className="absolute inset-x-0 top-0 -z-10 h-[520px] bg-grid-fade bg-[size:42px_42px] opacity-[0.05]" />
 
       <Container>
-        <div className="max-w-[74rem]">
+        <div className="w-full">
           <div className="max-w-[66rem]">
             <Badge className="bg-[color:var(--theme-surface-2)] text-[color:var(--foreground-soft)]">
               {copy.hero.kicker}
@@ -81,7 +81,7 @@ export function HeroSection({
           <ExternalAccessPanel
             locale={locale}
             copy={copy.externalAccess}
-            className="mt-8 w-full"
+            className="mt-10 w-full"
           />
 
           <div className="mt-16 lg:mt-20">
