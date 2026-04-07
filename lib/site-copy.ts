@@ -69,6 +69,15 @@ export interface SiteDictionary {
     openMenuLabel: string;
     closeMenuLabel: string;
   };
+  externalAccess: {
+    adminLabel: string;
+    adminDescription: string;
+    adminAction: string;
+    appsLabel: string;
+    appsDescription: string;
+    appStoreLabel: string;
+    playStoreLabel: string;
+  };
   hero: {
     kicker: string;
     title: string;
@@ -212,6 +221,17 @@ const en: SiteDictionary = {
     requestDemoLabel: "Request Demo",
     openMenuLabel: "Open navigation menu",
     closeMenuLabel: "Close navigation menu",
+  },
+  externalAccess: {
+    adminLabel: "Open Admin Portal",
+    adminDescription:
+      "Go straight to the Rice Flow control workspace for supervisors and operations teams.",
+    adminAction: "Launch secure admin",
+    appsLabel: "Download the app",
+    appsDescription:
+      "Get Rice Flow on mobile for field response, alerts, and operational visibility.",
+    appStoreLabel: "Download on App Store",
+    playStoreLabel: "Get it on Google Play",
   },
   hero: {
     kicker: "Built for modern rice mill operations",
@@ -859,6 +879,17 @@ const th: SiteDictionary = {
     requestDemoLabel: "ขอนัด Demo",
     openMenuLabel: "เปิดเมนูนำทาง",
     closeMenuLabel: "ปิดเมนูนำทาง",
+  },
+  externalAccess: {
+    adminLabel: "เข้า Admin Portal",
+    adminDescription:
+      "เข้าสู่พื้นที่ควบคุมงานของ Rice Flow สำหรับทีมปฏิบัติการและผู้ดูแลระบบได้ทันที",
+    adminAction: "เปิดระบบบริหาร",
+    appsLabel: "ดาวน์โหลดแอป",
+    appsDescription:
+      "ใช้งาน Rice Flow บนมือถือสำหรับการตอบสนองหน้างาน การแจ้งเตือน และการมองเห็นสถานะ",
+    appStoreLabel: "ดาวน์โหลดบน App Store",
+    playStoreLabel: "ดาวน์โหลดบน Google Play",
   },
   hero: {
     kicker: "ออกแบบมาสำหรับการปฏิบัติการของโรงสีข้าวยุคใหม่",

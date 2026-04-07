@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
+import { ExternalAccessPanel } from "@/components/ui/external-access-panel";
 import { ProductPreview } from "@/components/ui/product-preview";
 import type { Locale } from "@/lib/i18n";
 import type { SiteDictionary } from "@/lib/site-copy";
@@ -20,7 +21,10 @@ function HeroCta({
         className="group min-h-14 w-full border-0 bg-[linear-gradient(135deg,color-mix(in_srgb,var(--accent)_88%,white_12%)_0%,var(--accent)_62%,var(--warm)_100%)] px-7 text-base font-semibold text-[color:var(--accent-foreground)] shadow-[0_18px_48px_var(--theme-shadow-accent)] transition duration-300 hover:-translate-y-1 hover:brightness-105 sm:w-auto"
       >
         <span>{copy.primaryCta}</span>
-        <span className="ml-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">
+        <span
+          className="ml-2 transition-transform duration-300 group-hover:translate-x-1"
+          aria-hidden="true"
+        >
           &rarr;
         </span>
       </Button>
@@ -58,7 +62,7 @@ export function HeroSection({
       <div className="absolute inset-x-0 top-0 -z-10 h-[520px] bg-grid-fade bg-[size:42px_42px] opacity-[0.05]" />
 
       <Container>
-        <div className="max-w-[74rem]">
+        <div className="w-full">
           <div className="max-w-[66rem]">
             <Badge className="bg-[color:var(--theme-surface-2)] text-[color:var(--foreground-soft)]">
               {copy.hero.kicker}
@@ -73,6 +77,12 @@ export function HeroSection({
               <HeroCta locale={locale} copy={copy.hero} />
             </div>
           </div>
+
+          <ExternalAccessPanel
+            locale={locale}
+            copy={copy.externalAccess}
+            className="mt-10 w-full"
+          />
 
           <div className="mt-16 lg:mt-20">
             <ProductPreview locale={locale} copy={copy.productPreview} />
